@@ -11,7 +11,8 @@ var ResidentFormSchema = new mongoose.Schema({
         value: String,
         category: String
     }],
-    completedOn: String
+    completedOn: String,
+    user: {type: mongoose.Schema.ObjectId, ref: 'user'},
 });
 
 
