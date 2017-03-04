@@ -7,7 +7,7 @@
 
 module.exports = {
   DOMAIN: 'http://localhost:9000',
-  SESSION_SECRET: 'd2d2-secret',
+  SESSION_SECRET: 'd2d-secret',
 
   // Control debug level for modules using visionmedia/debug
   DEBUG: ''

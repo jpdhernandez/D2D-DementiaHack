@@ -33,7 +33,7 @@ export class MainController {
   }
 }
 
-export default angular.module('d2d2App.main', [ngRoute])
+export default angular.module('d2dApp.main', [ngRoute])
   .config(routing)
   .component('main', {
     template: require('./main.html'),

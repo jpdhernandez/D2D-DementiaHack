@@ -28,7 +28,7 @@ import util from '../components/util/util.module';
 
 import './app.css';
 
-angular.module('d2d2App', [ngCookies, ngResource, ngSanitize, ngRoute, uiBootstrap, _Auth, account,
+angular.module('d2dApp', [ngCookies, ngResource, ngSanitize, ngRoute, uiBootstrap, _Auth, account,
   admin, navbar, footer, main, constants, util
 ])
   .config(routeConfig)
@@ -47,7 +47,7 @@ angular.module('d2d2App', [ngCookies, ngResource, ngSanitize, ngRoute, uiBootstr
 
 angular.element(document)
   .ready(() => {
-    angular.bootstrap(document, ['d2d2App'], {
+    angular.bootstrap(document, ['d2dApp'], {
       strictDi: true
     });
   });

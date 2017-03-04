@@ -1,4 +1,4 @@
-# d2d2
+# d2d
 
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.1.3.
 
