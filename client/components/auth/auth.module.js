@@ -24,7 +24,7 @@ function addInterceptor($httpProvider) {
   $httpProvider.interceptors.push('authInterceptor');
 }
 
-export default angular.module('d2dApp.auth', [constants, util, ngCookies, ngRoute])
+export default angular.module('d2DDementiaHackApp.auth', [constants, util, ngCookies, ngRoute])
   .factory('authInterceptor', authInterceptor)
   .run(routerDecorator)
   .factory('Auth', AuthService)

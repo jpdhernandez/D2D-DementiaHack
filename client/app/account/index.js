@@ -8,7 +8,7 @@ import login from './login';
 import settings from './settings';
 import signup from './signup';
 
-export default angular.module('d2dApp.account', [ngRoute, login, settings, signup])
+export default angular.module('d2DDementiaHackApp.account', [ngRoute, login, settings, signup])
   .config(routing)
   .run(function($rootScope) {
     'ngInject';

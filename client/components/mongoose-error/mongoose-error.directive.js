@@ -5,7 +5,7 @@ import angular from 'angular';
 /**
  * Removes server error when user updates input
  */
-angular.module('d2dApp')
+angular.module('d2DDementiaHackApp')
   .directive('mongooseError', function() {
     return {
       restrict: 'A',

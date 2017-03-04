@@ -5,6 +5,6 @@ import {
   UtilService
 } from './util.service';
 
-export default angular.module('d2dApp.util', [])
+export default angular.module('d2DDementiaHackApp.util', [])
   .factory('Util', UtilService)
   .name;
