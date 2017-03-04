@@ -13,7 +13,7 @@ var ResidentFormSchema = new mongoose.Schema({
   Identity : {
     "Where did you grow up" : String,
     "Did you belong to any groups or clubs? (volunteering, service clubs, sports leagues, etc)" : String,
-    "My favourite things include...(pets, foods, drinks etc.)" : String
+    "My favourite things include" : String
   },
   Autonomy : {
     "What time do you prefer to get up?": String,
@@ -21,6 +21,7 @@ var ResidentFormSchema = new mongoose.Schema({
   },
   completed: { type: Boolean, default: false } //flag : is the form completed starts with false
 });
+
 
 registerEvents(ResidentFormSchema);
 export default mongoose.model('ResidentForm', ResidentFormSchema);
