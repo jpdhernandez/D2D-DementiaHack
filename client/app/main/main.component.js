@@ -6,7 +6,7 @@ export class MainController {
 
   awesomeThings = [];
   newThing = '';
-  residentsSummary = [];
+  // residentsSummary = [];
 
   /*@ngInject*/
   constructor($http,$scope) {
@@ -20,6 +20,7 @@ export class MainController {
     this.securityFlag = false;
     this.meaningFlag = false;
     this.joyFlag = false;
+    this.residentsSummary = [];
   }
 
 
@@ -82,10 +83,14 @@ export class MainController {
       .then(response => {
         this.awesomeThings = response.data;
       });
-    this.$http.get('/api/resident-forms')
-      .then(response => {
-        this.residentsSummary = response.data;
-      })
+      this.$http.get('/api/resident-forms')
+        .then(response => {
+          for (var i = 0 ; i < response.data.length; i++){
+            if(response.data[i].completedOn !== null){
+                  this.residentsSummary.push(response.data[i])
+            }
+          }
+        });
   }
 
   addThing() {
