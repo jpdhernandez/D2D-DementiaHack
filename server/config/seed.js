@@ -58,8 +58,9 @@ export default function seedDatabaseIfNeeded() {
         .then(() => {
           return User.create({
             provider: 'local',
-            name: 'Test User',
-            email: 'test@example.com',
+            name: 'Anne Smith',
+            email: 'annesmith@example.com',
+            role: 'resident',
             password: 'test'
           }, {
             provider: 'local',
@@ -73,7 +74,7 @@ export default function seedDatabaseIfNeeded() {
               return User.create({
                 provider: 'local',
                 role: generateRandomUserRole(),
-                name: `Test${idx} User${idx}`,
+                name: `Mary Smith`,
                 email: `test${idx}@example.com`,
                 password: 'test'
               });
