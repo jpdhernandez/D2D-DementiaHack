@@ -35,11 +35,13 @@
     "method-override": "^2.3.5",
     "mongoose": "^4.1.2",
     "morgan": "~1.7.0",
+    "parse-color": "^1.0.0",
     "passport": "~0.3.0",
     "passport-local": "^1.0.0",
     "serve-favicon": "^2.3.0",
     "shrink-ray": "^0.1.3",
-    "sprint-js": "~0.1.0"
+    "sprint-js": "~0.1.0",
+    "words-to-numbers": "^1.2.1"
   },
   "devDependencies": {
     "angular-mocks": "~1.6.0",

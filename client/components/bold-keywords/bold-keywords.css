@@ -12,6 +12,17 @@
   color: green;
 }
 
+.number-word {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.heart-icon {
+  font-size: 30px;
+  font-weight: bold;
+  color: pink;
+}
+
 .bad-word {
   font-size: 25px;
   font-weight: bold;

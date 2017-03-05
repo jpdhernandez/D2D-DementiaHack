@@ -1,5 +1,5 @@
 <div>
   <span ng-repeat="word in $ctrl.words">
-    <span ng-class="word.cssClass">{{word.word}}</span>
+    <span ng-class="word.cssClass" ng-style="word.style">{{word.word}}</span>
   </span>
 <div>
