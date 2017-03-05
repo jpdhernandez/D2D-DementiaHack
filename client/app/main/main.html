@@ -149,6 +149,35 @@
 
 
   <!-- data page -->
+<div align="center">
+  <div ng-if='!$ctrl.showAllResidents'>
+    
+    <img class="category-icon-img-off" ng-click='$ctrl.identityClick()' src="../assets/images/icon_identity.png" alt="">
+    <img class="category-icon-img-on" src="../assets/images/icon_identity_g.png" alt="">
+
+    <img class="category-icon-img-off" ng-click='$ctrl.growthClick()' src="../assets/images/icon_growth.png" alt="">
+    <img class="category-icon-img-on" src="../assets/images/icon_growth_g.png" alt="">
+
+    <img class="category-icon-img-off" ng-click='$ctrl.autonomyClick()' src="../assets/images/icon_autonomy.png" alt="">
+    <img class="category-icon-img-on" src="../assets/images/icon_autonomy_g.png" alt="">
+
+    <img class="category-icon-img-off" ng-click='$ctrl.securityClick()' src="../assets/images/icon_security.png" alt="">
+    <img class="category-icon-img-on" src="../assets/images/icon_security_g.png" alt="">
+
+    <img class="category-icon-img-off" ng-click='$ctrl.connectednessClick()' src="../assets/images/icon_connectedness.png" alt="">
+    <img class="category-icon-img-on" src="../assets/images/icon_connectedness_g.png" alt="">
+
+    <img class="category-icon-img-off" ng-click='$ctrl.meaningClick()' src="../assets/images/icon_meaning.png" alt="">
+    <img class="category-icon-img-on" src="../assets/images/icon_meaning_g.png" alt="">
+
+    <img class="category-icon-img-off" ng-click='$ctrl.joyClick()' src="../assets/images/icon_joy.png" alt="">
+    <img class="category-icon-img-on"src="../assets/images/icon_joy_g.png" alt="">
+  </div>
+</div>  
+
+
+
+
 <div ng-if='!$ctrl.showAllResidents' class="row">
   <div class="col-md-3"></div>
 
@@ -305,7 +334,7 @@
 
 
   <div align="center" class="title-div">
-    <p class="title-text">Autonomy</p>
+    <p class="title-text">Connectedness</p>
   </div>
 
   <div class="q-icon-div">
@@ -370,11 +399,11 @@
 
 
   <div align="center" class="title-div">
-    <p class="title-text">Autonomy</p>
+    <p class="title-text">Growth</p>
   </div>
 
   <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/c_1.png" alt="">
+    <img class="q-icon-img" src="../assets/images/d_1.png" alt="">
   </div>
 
   <div id="b-8" class="q-text-div">
@@ -384,7 +413,7 @@
 
 
   <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/c_2.png" alt="">
+    <img class="q-icon-img" src="../assets/images/d_2.png" alt="">
   </div>
 
   <div id="b-2" class="q-text-div">
@@ -394,7 +423,7 @@
 
 
   <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/c_3.png" alt="">
+    <img class="q-icon-img" src="../assets/images/d_3.png" alt="">
   </div>
 
   <div id="b-3" class="q-text-div">
@@ -404,7 +433,7 @@
 
 
   <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/c_4.png" alt="">
+    <img class="q-icon-img" src="../assets/images/d_4.png" alt="">
   </div>
 
   <div id="b-4" class="q-text-div">
@@ -414,7 +443,7 @@
 
 
   <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/c_5.png" alt="">
+    <img class="q-icon-img" src="../assets/images/d_5.png" alt="">
   </div>
 
   <div id="b-5" class="q-text-div">
@@ -424,7 +453,7 @@
 
 
   <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/c_6.png" alt="">
+    <img class="q-icon-img" src="../assets/images/d_6.png" alt="">
   </div>
 
   <div id="b-6" class="q-text-div">
@@ -435,137 +464,7 @@
 
 
     <div class="titl4-div">
-    <p class="title-text">Autonomy</p>
-  </div>
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_1.png" alt="">
-  </div>
-
-  <div id="b-8" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_2.png" alt="">
-  </div>
-
-  <div id="b-2" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_3.png" alt="">
-  </div>
-
-  <div id="b-3" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_4.png" alt="">
-  </div>
-
-  <div id="b-4" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_5.png" alt="">
-  </div>
-
-  <div id="b-5" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_6.png" alt="">
-  </div>
-
-  <div id="b-6" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-
-   <div align="center" class="title-div">
-    <p class="title-text">Autonomy</p>
-  </div>
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_1.png" alt="">
-  </div>
-
-  <div id="b-8" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_2.png" alt="">
-  </div>
-
-  <div id="b-2" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_3.png" alt="">
-  </div>
-
-  <div id="b-3" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_4.png" alt="">
-  </div>
-
-  <div id="b-4" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_5.png" alt="">
-  </div>
-
-  <div id="b-5" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div>
-
-
-  <div class="q-icon-div">
-    <img class="q-icon-img" src="../assets/images/d_6.png" alt="">
-  </div>
-
-  <div id="b-6" class="q-text-div">
-    <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
-  </div> 
-
-
-
-  <div align="center" class="title-div">
-    <p class="title-text">Autonomy</p>
+    <p class="title-text">Security</p>
   </div>
 
   <div class="q-icon-div">
@@ -620,6 +519,136 @@
 
   <div class="q-icon-div">
     <img class="q-icon-img" src="../assets/images/e_6.png" alt="">
+  </div>
+
+  <div id="b-6" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+
+   <div align="center" class="title-div">
+    <p class="title-text">Meaning</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_1.png" alt="">
+  </div>
+
+  <div id="b-8" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_2.png" alt="">
+  </div>
+
+  <div id="b-2" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_3.png" alt="">
+  </div>
+
+  <div id="b-3" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_4.png" alt="">
+  </div>
+
+  <div id="b-4" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_5.png" alt="">
+  </div>
+
+  <div id="b-5" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_6.png" alt="">
+  </div>
+
+  <div id="b-6" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div> 
+
+
+
+  <div align="center" class="title-div">
+    <p class="title-text">Joy</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_1.png" alt="">
+  </div>
+
+  <div id="b-8" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_2.png" alt="">
+  </div>
+
+  <div id="b-2" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_3.png" alt="">
+  </div>
+
+  <div id="b-3" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_4.png" alt="">
+  </div>
+
+  <div id="b-4" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_5.png" alt="">
+  </div>
+
+  <div id="b-5" class="q-text-div">
+    <p>
+    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_6.png" alt="">
   </div>
 
   <div id="b-6" class="q-text-div">

@@ -121,12 +121,18 @@ p {
 }
 
 
-.icon-img {
+.category-icon-img-off {
   height: 50px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
 }
 
-.icon-img-on {
-  height: 70px;
+.category-icon-img-on {
+  height: 65px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
 }
 
 .graphs-page-body {
