@@ -1,5 +1,12 @@
+
 .thing-form {
   margin: 20px 0;
+}
+
+.nav-logo {
+  height: 40px;
+  margin-top: 5px;
+  margin-left: -10px;
 }
 
 #banner {
@@ -7,11 +14,7 @@
   margin-top: -20px;
 }
 
-#banner h1 {
-  font-size: 60px;
-  line-height: 1;
-  letter-spacing: -1px;
-}
+
 
 .hero-unit {
   position: relative;
@@ -19,9 +22,14 @@
   color: #F5F5F5;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  background: #4393B9;
+  background: pink;
 }
 
 .navbar-text {
   margin-left: 15px;
+}
+
+
+.icon-img {
+  height: 50px;
 }
