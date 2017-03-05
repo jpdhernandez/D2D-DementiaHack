@@ -1,5 +1,8 @@
+<div  class='container'>
+
 <div class="row  row-centered">
-  <div class="col-md-6 col-centered">
+  <div class='col-md-2'></div>
+  <div class="col-md-8 col-centered">
     <!--<pre>{{$ctrl.props.allQuestions|json}}</pre>-->
     <form name="nestedForm" class="tab-form-demo">
       <uib-tabset active="$ctrl.tabIdx">
@@ -21,7 +24,11 @@
                      close-text="$ctrl.Close"
                      alt-input-formats="$ctrl.altInputFormats" />
               <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="$ctrl.open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                <button type="button" 
+                        class="btn btn-default" 
+                        ng-click="$ctrl.open1()">
+                  <i class="glyphicon glyphicon-calendar"></i>
+                </button>
               </span>
             </p>
           </div>
@@ -36,4 +43,7 @@
       </uib-tabset>
     </form>
   </div>
+  <div class='col-md-2'></div>
+</div>
+
 </div>
