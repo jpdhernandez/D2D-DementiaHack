@@ -6,13 +6,13 @@ export class MainController {
 
   awesomeThings = [];
   newThing = '';
+  residentsSummary = [];
 
   /*@ngInject*/
-  constructor($http) {
+  constructor($http,$scope) {
     this.$http = $http;
     this.meow = "meow 1 2 3";
     this.showAllResidents = true;
-
     this.identityFlag = true;
     this.autonomyFlag = false;
     this.connectednessFlag = false;
@@ -32,7 +32,7 @@ export class MainController {
   identityClick() {
     this.categoriesToFalse();
     this.identityFlag = true;
-  }  
+  }
 
   autonomyClick() {
     this.categoriesToFalse();
@@ -42,7 +42,7 @@ export class MainController {
   connectednessClick() {
     this.categoriesToFalse();
     this.connectednessFlag = true;
-  }  
+  }
 
   growthClick() {
     this.categoriesToFalse();
@@ -71,7 +71,7 @@ export class MainController {
     this.growthFlag = false;
     this.securityFlag = false;
     this.meaningFlag = false;
-    this.joyFlag = false;    
+    this.joyFlag = false;
   }
 
 
@@ -82,6 +82,10 @@ export class MainController {
       .then(response => {
         this.awesomeThings = response.data;
       });
+    this.$http.get('/api/resident-forms')
+      .then(response => {
+        this.residentsSummary = response.data;
+      })
   }
 
   addThing() {
