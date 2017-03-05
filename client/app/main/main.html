@@ -47,7 +47,7 @@
 
 
   <!-- data page -->
-<div align="center">
+<div align="center" style="margin-left: 100px;">
   <div ng-if='!$ctrl.showAllResidents'>
 
     <img ng-if='!$ctrl.identityFlag' class="category-icon-img-off" ng-click='$ctrl.identityClick()' src="../assets/images/icon_identity.png" alt="">
@@ -84,11 +84,11 @@
   <div class=" col-md-6 graphs-page-body">
 
 
-  <div align="center" class="title-div">
+  <div ng-if='$ctrl.identityFlag' align="center" class="title-div">
     <p class="title-text">Identity</p>
   </div>
 
-  <div class="row">
+  <div ng-if='$ctrl.identityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/a_1.png" alt="">
     </div>
@@ -98,12 +98,12 @@
   </div>
 
 
-  <div id="a-1" class="q-text-div"><p>
+  <div ng-if='$ctrl.identityFlag' id="a-1" class="q-text-div"><p>
     <bold-keywords phrase="'I love eating 4 pizzas everyday and hate cookies.'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.identityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/a_2.png" alt="">
     </div>
@@ -112,13 +112,13 @@
     </div>
   </div>
 
-  <div id="a-2" class="q-text-div">
+  <div ng-if='$ctrl.identityFlag' id="a-2" class="q-text-div">
     <p>
     <bold-keywords phrase="'I like eating pizza on Sundays. Sometimes I eat cookies on Thursdays, but hate chicken on Fridays.'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.identityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/a_3.png" alt="">
     </div>
@@ -127,12 +127,12 @@
     </div>
   </div>
 
-  <div id="a-3" class="q-text-div">
+  <div ng-if='$ctrl.identityFlag' id="a-3" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
-  <div class="row">
+  <div ng-if='$ctrl.identityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/a_4.png" alt="">
     </div>
@@ -141,13 +141,13 @@
     </div>
   </div>
 
-  <div id="a-4" class="q-text-div">
+  <div ng-if='$ctrl.identityFlag' id="a-4" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.identityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/a_5.png" alt="">
     </div>
@@ -156,13 +156,13 @@
     </div>
   </div>
 
-  <div id="a-5" class="q-text-div">
+  <div ng-if='$ctrl.identityFlag' id="a-5" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.identityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/a_6.png" alt="">
     </div>
@@ -171,13 +171,13 @@
     </div>
   </div>
 
-  <div id="a-6" class="q-text-div">
+  <div ng-if='$ctrl.identityFlag' id="a-6" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.identityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/a_7.png" alt="">
     </div>
@@ -186,22 +186,22 @@
     </div>
   </div>
 
-  <div id="a-7" class="q-text-div">
+  <div ng-if='$ctrl.identityFlag' id="a-7" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.identityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/a_8.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-red'>$$$$$</p>
+      <p class='text-color-red'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="a-8" class="q-text-div">
+  <div ng-if='$ctrl.identityFlag' id="a-8" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
@@ -209,56 +209,56 @@
 
 
 
-  <div align="center" class="title-div">
+  <div ng-if='$ctrl.autonomyFlag' align="center" class="title-div">
     <p class="title-text">Autonomy</p>
   </div>
 
-  <div class="row">
+  <div ng-if='$ctrl.autonomyFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/b_1.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-green'>$$$$$</p>
+      <p class='text-color-green'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="b-8" class="q-text-div">
+  <div ng-if='$ctrl.autonomyFlag' id="b-8" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.autonomyFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/b_2.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-yellow'>$$$$$</p>
+      <p class='text-color-yellow'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="b-2" class="q-text-div">
+  <div ng-if='$ctrl.autonomyFlag' id="b-2" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.autonomyFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/b_3.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-blue'>$$$$$</p>
+      <p class='text-color-blue'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="b-3" class="q-text-div">
+  <div ng-if='$ctrl.autonomyFlag' id="b-3" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.autonomyFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/b_4.png" alt="">
     </div>
@@ -267,184 +267,184 @@
     </div>
   </div>
 
-  <div id="b-4" class="q-text-div">
+  <div ng-if='$ctrl.autonomyFlag' id="b-4" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.autonomyFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/b_5.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-green'>$$$$$</p>
+      <p class='text-color-green'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="b-5" class="q-text-div">
+  <div ng-if='$ctrl.autonomyFlag' id="b-5" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.autonomyFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/b_6.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-yellow'>$$$$$</p>
+      <p class='text-color-yellow'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="b-6" class="q-text-div">
+  <div ng-if='$ctrl.autonomyFlag' id="b-6" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
 
-  <div align="center" class="title-div">
+  <div ng-if='$ctrl.connectednessFlag' align="center" class="title-div">
     <p class="title-text">Connectedness</p>
   </div>
 
-  <div class="row">
+  <div ng-if='$ctrl.connectednessFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/c_1.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-blue'>$$$$$</p>
+      <p class='text-color-blue'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="b-1" class="q-text-div">
+  <div ng-if='$ctrl.connectednessFlag' id="b-1" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
 
-  <div align="center" class="title-div">
+  <div ng-if='$ctrl.growthFlag' align="center" class="title-div">
     <p class="title-text">Growth</p>
   </div>
 
-  <div class="row">
+  <div ng-if='$ctrl.growthFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/d_1.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-red'>$$$$$</p>
+      <p class='text-color-red'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="d-1" class="q-text-div">
+  <div ng-if='$ctrl.growthFlag' id="d-1" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.growthFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/d_2.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-green'>$$$$$</p>
+      <p class='text-color-green'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="d-2" class="q-text-div">
+  <div ng-if='$ctrl.growthFlag' id="d-2" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.growthFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/d_3.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-yellow'>$$$$$</p>
+      <p class='text-color-yellow'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="d-3" class="q-text-div">
+  <div ng-if='$ctrl.growthFlag' id="d-3" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
 
-  <div class="titl4-div">
+  <div ng-if='$ctrl.securityFlag' class="titl4-div">
     <p class="title-text">Security</p>
   </div>
 
-  <div class="row">
+  <div ng-if='$ctrl.securityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/e_1.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-blue'>$$$$$</p>
+      <p class='text-color-blue'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="e-1" class="q-text-div">
+  <div ng-if='$ctrl.securityFlag' id="e-1" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.securityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/e_2.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-red'>$$$$$</p>
+      <p class='text-color-red'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="e-2" class="q-text-div">
+  <div ng-if='$ctrl.securityFlag' id="e-2" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.securityFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/e_3.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-green'>$$$$$</p>
+      <p class='text-color-green'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="e-3" class="q-text-div">
+  <div ng-if='$ctrl.securityFlag' id="e-3" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
 
-   <div align="center" class="title-div">
+   <div ng-if='$ctrl.meaningFlag' align="center" class="title-div">
     <p class="title-text">Meaning</p>
   </div>
 
-  <div class="row">
+  <div ng-if='$ctrl.meaningFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/f_1.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-yellow'>$$$$$</p>
+      <p class='text-color-yellow'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="f-1" class="q-text-div">
+  <div ng-if='$ctrl.meaningFlag' id="f-1" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
 
-  <div align="center" class="title-div">
+  <div ng-if='$ctrl.joyFlag' align="center" class="title-div">
     <p class="title-text">Joy</p>
   </div>
 
@@ -453,26 +453,26 @@
       <img class="q-icon-img" src="../assets/images/g_1.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-blue'>$$$$$</p>
+      <p class='text-color-blue'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="g-1" class="q-text-div">
+  <div ng-if='$ctrl.joyFlag' id="g-1" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>
 
 
-  <div class="row">
+  <div ng-if='$ctrl.joyFlag' class="row">
     <div class="q-icon-div col-xs-4">
       <img class="q-icon-img" src="../assets/images/g_2.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class='text-color-red'>$$$$$</p>
+      <p class='text-color-red'>Lorem Ipsum</p>
     </div>
   </div>
 
-  <div id="g-2" class="q-text-div">
+  <div ng-if='$ctrl.joyFlag' id="g-2" class="q-text-div">
     <p>
     <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
   </div>

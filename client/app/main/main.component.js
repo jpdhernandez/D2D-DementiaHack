@@ -11,7 +11,6 @@ export class MainController {
   /*@ngInject*/
   constructor($http,$scope) {
     this.$http = $http;
-    this.meow = "meow 1 2 3";
     this.showAllResidents = true;
     this.identityFlag = true;
     this.autonomyFlag = false;
