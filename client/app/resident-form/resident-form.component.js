@@ -24,7 +24,8 @@ export class ResidentFormComponent {
     this.props.getById(this.$routeParams.userId);
 
     this.submit = () => {
-      residentForm.props.submit(this.$routeParams.userId, this.props.allQuestions);
+      residentForm.props.submit(this.$routeParams.userId, this.props.allQuestions)
+      .then(() => this.showMessage = true);
     }
 
     // date stuff

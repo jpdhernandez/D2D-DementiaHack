@@ -64,8 +64,8 @@ export default function seedDatabaseIfNeeded() {
           }, {
             provider: 'local',
             role: 'admin',
-            name: 'Admin',
-            email: 'admin@example.com',
+            name: 'Julian Hernandez',
+            email: 'jpdhernandez@gmail.com',
             password: 'admin'
           })
           .then(() => {

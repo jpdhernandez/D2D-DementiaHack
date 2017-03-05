@@ -13,6 +13,8 @@
 import jsonpatch from 'fast-json-patch';
 import ResidentForm from './resident-form.model';
 import _ from 'lodash';
+import nodemailer from 'nodemailer';
+import User from '../user/user.model';
 
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;
@@ -145,7 +147,6 @@ function createQuestionItem(question, category) {
 
 // Gets a list of ResidentForms
 export function index(req, res) {
-  console.log('where ami ');
   return ResidentForm.find()
   .populate({ path: 'user', select: 'name email' })
   .exec()
@@ -155,7 +156,6 @@ export function index(req, res) {
 
 // Gets a single ResidentForm from the DB
 export function show(req, res) {
-  console.log(' finding ', req.params);
   return ResidentForm.findOne({user: req.params.userId}).exec()
     .then(respondWithResult(res))
     .catch(handleError(res));
@@ -172,8 +172,12 @@ export function create(req, res) {
 export function update(req, res) {
   const updatedForm = req.body.data;
 
-  return ResidentForm.findOne({ user: req.params.userId })
-  .then((form) => {
+  return Promise.all([
+    ResidentForm.findOne({ user: req.params.userId }),
+    User.findById(req.params.userId),
+    User.findOne({ email: "jpdhernandez@gmail.com" }),
+  ])
+  .then(([form, user, admin]) => {
     if (!form) {
       return res.send(404);
     }
@@ -182,12 +186,54 @@ export function update(req, res) {
 
     _.each(form.questions, (question, idx) => {
       const updated = updatedForm[idx];
-      console.log('updated = ', updated);
 
       if (!_.isEqual(question.value, updated.value)) {
         updates.push({ oldValue: question, newValue: updated });
       }
     });
+
+    if (updates.length) {
+      let transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+              user: 'dementiahackd2d@gmail.com',
+              pass: 'qt8xrW8T9ISy0gii'
+          }
+      });
+
+
+      const questions = _.map(updates, ({ oldValue, newValue }) => {
+        return `
+          Question: ${oldValue.name},
+          Old Answer: ${oldValue.value || "N/A"},
+          New Answer: ${newValue.value || "N/A"}
+        `;
+      });
+
+      let mailOptions = {
+          from: '"DementiaHack D2D 👻" <dementiahackd2d@gmail.com>', // sender address
+          to: `${admin.name} <${admin.email}>`, // list of receivers
+          subject: 'Some changes were made by a family member', // plain text body
+          html: `
+            <b>Hi ${admin.name},</b>
+
+            <p>A change was made for ${user.name}:</p>
+
+            <p>
+              ${questions}
+            </p>
+          ` // html body
+      };
+
+      // send mail with defined transport object
+      transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+              return console.log(error);
+          }
+          console.log('Message %s sent: %s', info.messageId, info.response);
+      });
+    }
+
 
     return ResidentForm.findOneAndUpdate(
       { user: req.params.userId }, {
