@@ -26,11 +26,10 @@ var userInfo = {
 	image_url: 'https://image.freepik.com/free-icon/male-user-shadow_318-34042.jpg'
 };
 
-var width = 960,
-    height = 500;
 
-var centerX = width / 2,
-    centerY = height / 2;
+
+var width = 960,
+    height = 130;
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
@@ -62,8 +61,8 @@ allDefs.append('pattern')
 	.append('image')
 		.attr('x', 8)
 		.attr('y', 8)
-		.attr('height', "140px")
-		.attr('width', "140px")
+		.attr('height', "85px")
+		.attr('width', "85px")
 		.attr('xlink:href', userInfo.image_url)
 		
 
@@ -71,8 +70,8 @@ var radius = 180
 var catData = d3.range(categories.length).map(function(d, i) {
         var angle  = (Math.PI / categories.length) * d * 2;
         return Object.assign(categories[i], {
-            cx : centerX + Math.cos(angle) * radius,
-            cy : centerY + Math.sin(angle) * radius,
+            cx : 180 + i*(catSize+40), //centerX + Math.cos(angle) * radius,
+            cy : 50, //centerY + Math.sin(angle) * radius,
             r  : catSize / 2,
 	    font_size : 7
         });
@@ -83,7 +82,7 @@ var circle = svg.selectAll("g")
 	.data(catData)
 circle.enter().append('g')
 	.attr('id', function(d,i) { return 'g'+d.name })
-	.attr("transform", function(da) { return "translate("+centerX+","+centerY+")"; })
+	.attr("transform", function(da) { return "translate(70, 50)"; })
 
 circle.append("circle")
 	.attr("r", function(d){ return d.r })
@@ -105,7 +104,7 @@ circle.append("circle")
 			.ease("cubic-out")
 			.duration("200")
 			.attr("y", d.r + d.font_size + 15)
-			.attr("font-weight", "bolder")
+			.attr("font-weight", "bold")
 	})
 	.on("mouseout", function(d,i) {
 		d3.select(this).transition()
@@ -123,7 +122,13 @@ circle.append("circle")
 			.duration("700")
 			.attr("y", d.r + d.font_size + 5)
 			.attr("font-weight", "bold")
-	});
+	})
+	.on('click', function(d,i) {
+	/*	d3.select('#g'+d.name).transition()
+			.ease("sin")
+			.duration("800")
+			.attr("transform", "translate(100,50)")*/
+	})
 
 circle.append('text')
 	.attr('y', function(d) { return d.r + d.font_size + 5 })
@@ -139,9 +144,10 @@ circle.transition()
 	.attr("transform", function(d) { return "translate("+d.cx+","+d.cy+")"; })
 
 svg.append("circle")
-	.attr("r", 80)
-	.attr("cx", centerX)
-	.attr("cy", centerY)
+	.attr("id", "person")
+	.attr("r", 50)
+	.attr("cx", 70)
+	.attr("cy", 50)
 	.style("fill", function (d, i){ return "url(#user)"; })
 	.style("stroke", "black")
 	.style("stroke-width", 0.25)
