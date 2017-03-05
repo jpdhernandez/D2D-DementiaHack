@@ -35,7 +35,10 @@ var ResidentFormSchema = new mongoose.Schema({
       default: "text"
     }
   }],
-  completedOn: Date,
+  completedOn: {
+    type: Date,
+    default: null
+  },
   user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 });
 
