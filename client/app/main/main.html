@@ -1,18 +1,197 @@
-<header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
+
+
 
 <div class="container">
+
+
+<div ng-if='!$ctrl.showAllResidents'>
+  <img class="icon-img" ng-click='$ctrl.identityClick()' src="../assets/images/icon_identity.png" alt="">
+
+  <img class="icon-img" ng-click='$ctrl.growthClick()' src="../assets/images/icon_growth.png" alt="">
+
+  <img class="icon-img" ng-click='$ctrl.autonomyClick()' src="../assets/images/icon_autonomy.png" alt="">
+
+  <img class="icon-img" ng-click='$ctrl.securityClick()' src="../assets/images/icon_security.png" alt="">
+
+  <img class="icon-img" ng-click='$ctrl.connectednessClick()' src="../assets/images/icon_connectedness.png" alt="">
+
+  <img class="icon-img" ng-click='$ctrl.meaningClick()' src="../assets/images/icon_meaning.png" alt="">
+
+  <img class="icon-img" ng-click='$ctrl.joyClick()' src="../assets/images/icon_joy.png" alt="">
+
+
+</div>
+
+
   <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
-        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
-      </ul>
+
+      <div align="center">
+        <h2>Meet Our Residents</h2>
+      </div>
+
+      <div align="center">
+        <div style="width: 250px; margin-bottom: 10px;" class="input-group">
+          <input type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
+        </div>
+      </div>
+
+
+
+      <div ng-if='$ctrl.showAllResidents' class="row">
+
+        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+          <div  class="thumbnail">
+            <div class="row">
+              <div class="col-md-6">
+                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+                <p align="center" style="width: 120px;">Mary</p>
+              </div>
+              <div class="col-md-6">
+                <p>Resident since: 2017</p>
+                <p>Family Contact: Julian (son)</p>
+                <p> Contact Phone: <br> 555-555-5555</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="row">
+              <div class="col-md-6">
+                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.thetribuneregister.com/wp-content/uploads/2015/09/grandmother.jpg.CROP_.rectangle3-large.jpg" alt="...">
+                <p align="center" style="width: 120px;">Ana</p>
+              </div>
+              <div class="col-md-6">
+                <p>Resident since: 2017</p>
+                <p>Family Contact: Julian (son)</p>
+                <p> Contact Phone: <br> 555-555-5555</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="row">
+              <div class="col-md-6">
+                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.lifenews.com/wp-content/uploads/2012/06/grandfather.jpg" alt="...">
+                <p align="center" style="width: 120px;">John</p>
+              </div>
+              <div class="col-md-6">
+                <p>Resident since: 2017</p>
+                <p>Family Contact: Julian (son)</p>
+                <p> Contact Phone: <br> 555-555-5555</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="row">
+              <div class="col-md-6">
+                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+                <p align="center" style="width: 120px;">Mary</p>
+              </div>
+              <div class="col-md-6">
+                <p>Resident since: 2017</p>
+                <p>Family Contact: Julian (son)</p>
+                <p> Contact Phone: <br> 555-555-5555</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="row">
+              <div class="col-md-6">
+                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.thetribuneregister.com/wp-content/uploads/2015/09/grandmother.jpg.CROP_.rectangle3-large.jpg" alt="...">
+                <p align="center" style="width: 120px;">Ana</p>
+              </div>
+              <div class="col-md-6">
+                <p>Resident since: 2017</p>
+                <p>Family Contact: Julian (son)</p>
+                <p> Contact Phone: <br> 555-555-5555</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="row">
+              <div class="col-md-6">
+                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.lifenews.com/wp-content/uploads/2012/06/grandfather.jpg" alt="...">
+                <p align="center" style="width: 120px;">John</p>
+              </div>
+              <div class="col-md-6">
+                <p>Resident since: 2017</p>
+                <p>Family Contact: Julian (son)</p>
+                <p> Contact Phone: <br> 555-555-5555</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="row">
+              <div class="col-md-6">
+                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+                <p align="center" style="width: 120px;">Mary</p>
+              </div>
+              <div class="col-md-6">
+                <p>Resident since: 2017</p>
+                <p>Family Contact: Julian (son)</p>
+                <p> Contact Phone: <br> 555-555-5555</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="row">
+              <div class="col-md-6">
+                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.thetribuneregister.com/wp-content/uploads/2015/09/grandmother.jpg.CROP_.rectangle3-large.jpg" alt="...">
+                <p align="center" style="width: 120px;">Ana</p>
+              </div>
+              <div class="col-md-6">
+                <p>Resident since: 2017</p>
+                <p>Family Contact: Julian (son)</p>
+                <p> Contact Phone: <br> 555-555-5555</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <div class="row">
+              <div class="col-md-6">
+                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.lifenews.com/wp-content/uploads/2012/06/grandfather.jpg" alt="...">
+                <p align="center" style="width: 120px;">John</p>
+              </div>
+              <div class="col-md-6">
+                <p>Resident since: 2017</p>
+                <p>Family Contact: Julian (son)</p>
+                <p> Contact Phone: <br> 555-555-5555</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
     </div>
-  </div>
+
+  
 </div>

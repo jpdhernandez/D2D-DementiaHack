@@ -20,6 +20,12 @@ var UserSchema = new Schema({
     type: String,
     required: true
   },
+
+  image: String,
+  familyContact:String,
+  contactPhone: Number,
+  yearResident: Number,
+
   provider: String,
   salt: String
 });

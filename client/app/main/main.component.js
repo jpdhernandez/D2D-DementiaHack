@@ -10,7 +10,28 @@ export class MainController {
   /*@ngInject*/
   constructor($http) {
     this.$http = $http;
+    this.meow = "meow 1 2 3";
+    this.showAllResidents = true;
+
+    console.log('jnflsf', this.showAllResidents)
+
   }
+
+
+
+  residentClick() {
+    this.showAllResidents = false;
+  console.log('click!', this.showAllResidents);
+
+
+  }
+
+
+  test() {
+    this.flag = true;
+    this.x = 'cat';
+  }
+
 
   $onInit() {
     this.$http.get('/api/things')
@@ -32,6 +53,8 @@ export class MainController {
     this.$http.delete(`/api/things/${thing._id}`);
   }
 }
+
+
 
 export default angular.module('d2DDementiaHackApp.main', [ngRoute])
   .config(routing)
