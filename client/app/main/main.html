@@ -4,194 +4,712 @@
 <div class="container">
 
 
-<div ng-if='!$ctrl.showAllResidents'>
-  <img class="icon-img" ng-click='$ctrl.identityClick()' src="../assets/images/icon_identity.png" alt="">
+<!-- home page -->
 
-  <img class="icon-img" ng-click='$ctrl.growthClick()' src="../assets/images/icon_growth.png" alt="">
+  <div ng-if='$ctrl.showAllResidents' class="row">
 
-  <img class="icon-img" ng-click='$ctrl.autonomyClick()' src="../assets/images/icon_autonomy.png" alt="">
+    <div align="center">
+      <p class="meet-residents-text">Meet Our Residents</p>
+    </div>
 
-  <img class="icon-img" ng-click='$ctrl.securityClick()' src="../assets/images/icon_security.png" alt="">
-
-  <img class="icon-img" ng-click='$ctrl.connectednessClick()' src="../assets/images/icon_connectedness.png" alt="">
-
-  <img class="icon-img" ng-click='$ctrl.meaningClick()' src="../assets/images/icon_meaning.png" alt="">
-
-  <img class="icon-img" ng-click='$ctrl.joyClick()' src="../assets/images/icon_joy.png" alt="">
-
-
-</div>
+    <div align="center">
+      <div style="width: 250px; margin-bottom: 10px;" class="input-group">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+      </div>
+    </div>
 
 
-  <div class="row">
+    <div ng-if='$ctrl.showAllResidents' style="margin-top: 15px;" class="row">
 
-      <div align="center">
-        <h2>Meet Our Residents</h2>
+      <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+        <div  class="thumbnail">
+           <div align="center" class="profile-img-div">
+              <img align="center" class="profile-img" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+           </div>
+           <div align="center">
+              <p class='thumbnail-name'>Mary Smith</p>
+          
+              <p class="thumbnail-year">Resident since: 2017</p>
+           </div>
+           <div align="center">
+              <div class="btn btn-see-info"><p class="btn-see-info-text">More Info</p></div>
+           </div>
+        </div>
       </div>
 
-      <div align="center">
-        <div style="width: 250px; margin-bottom: 10px;" class="input-group">
-          <input type="text" class="form-control" placeholder="Search for...">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">Go!</button>
-          </span>
+      <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+        <div  class="thumbnail">
+           <div align="center" class="profile-img-div">
+              <img align="center" class="profile-img" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+           </div>
+           <div align="center">
+              <p class='thumbnail-name'>Mary Smith</p>
+          
+              <p class="thumbnail-year">Resident since: 2017</p>
+           </div>
+           <div align="center">
+              <div class="btn btn-see-info"><p class="btn-see-info-text">More Info</p></div>
+           </div>
+        </div>
+      </div>
+
+      <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+        <div  class="thumbnail">
+           <div align="center" class="profile-img-div">
+              <img align="center" class="profile-img" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+           </div>
+           <div align="center">
+              <p class='thumbnail-name'>Mary Smith</p>
+          
+              <p class="thumbnail-year">Resident since: 2017</p>
+           </div>
+           <div align="center">
+              <div class="btn btn-see-info"><p class="btn-see-info-text">More Info</p></div>
+           </div>
         </div>
       </div>
 
 
-
-      <div ng-if='$ctrl.showAllResidents' class="row">
-
-        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
-          <div  class="thumbnail">
-            <div class="row">
-              <div class="col-md-6">
-                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
-                <p align="center" style="width: 120px;">Mary</p>
-              </div>
-              <div class="col-md-6">
-                <p>Resident since: 2017</p>
-                <p>Family Contact: Julian (son)</p>
-                <p> Contact Phone: <br> 555-555-5555</p>
-              </div>
-            </div>
-          </div>
+      <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+        <div  class="thumbnail">
+           <div align="center" class="profile-img-div">
+              <img align="center" class="profile-img" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+           </div>
+           <div align="center">
+              <p class='thumbnail-name'>Mary Smith</p>
+          
+              <p class="thumbnail-year">Resident since: 2017</p>
+           </div>
+           <div align="center">
+              <div class="btn btn-see-info"><p class="btn-see-info-text">More Info</p></div>
+           </div>
         </div>
-
-        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <div class="row">
-              <div class="col-md-6">
-                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.thetribuneregister.com/wp-content/uploads/2015/09/grandmother.jpg.CROP_.rectangle3-large.jpg" alt="...">
-                <p align="center" style="width: 120px;">Ana</p>
-              </div>
-              <div class="col-md-6">
-                <p>Resident since: 2017</p>
-                <p>Family Contact: Julian (son)</p>
-                <p> Contact Phone: <br> 555-555-5555</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <div class="row">
-              <div class="col-md-6">
-                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.lifenews.com/wp-content/uploads/2012/06/grandfather.jpg" alt="...">
-                <p align="center" style="width: 120px;">John</p>
-              </div>
-              <div class="col-md-6">
-                <p>Resident since: 2017</p>
-                <p>Family Contact: Julian (son)</p>
-                <p> Contact Phone: <br> 555-555-5555</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <div class="row">
-              <div class="col-md-6">
-                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
-                <p align="center" style="width: 120px;">Mary</p>
-              </div>
-              <div class="col-md-6">
-                <p>Resident since: 2017</p>
-                <p>Family Contact: Julian (son)</p>
-                <p> Contact Phone: <br> 555-555-5555</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <div class="row">
-              <div class="col-md-6">
-                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.thetribuneregister.com/wp-content/uploads/2015/09/grandmother.jpg.CROP_.rectangle3-large.jpg" alt="...">
-                <p align="center" style="width: 120px;">Ana</p>
-              </div>
-              <div class="col-md-6">
-                <p>Resident since: 2017</p>
-                <p>Family Contact: Julian (son)</p>
-                <p> Contact Phone: <br> 555-555-5555</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <div class="row">
-              <div class="col-md-6">
-                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.lifenews.com/wp-content/uploads/2012/06/grandfather.jpg" alt="...">
-                <p align="center" style="width: 120px;">John</p>
-              </div>
-              <div class="col-md-6">
-                <p>Resident since: 2017</p>
-                <p>Family Contact: Julian (son)</p>
-                <p> Contact Phone: <br> 555-555-5555</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <div class="row">
-              <div class="col-md-6">
-                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
-                <p align="center" style="width: 120px;">Mary</p>
-              </div>
-              <div class="col-md-6">
-                <p>Resident since: 2017</p>
-                <p>Family Contact: Julian (son)</p>
-                <p> Contact Phone: <br> 555-555-5555</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <div class="row">
-              <div class="col-md-6">
-                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.thetribuneregister.com/wp-content/uploads/2015/09/grandmother.jpg.CROP_.rectangle3-large.jpg" alt="...">
-                <p align="center" style="width: 120px;">Ana</p>
-              </div>
-              <div class="col-md-6">
-                <p>Resident since: 2017</p>
-                <p>Family Contact: Julian (son)</p>
-                <p> Contact Phone: <br> 555-555-5555</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            <div class="row">
-              <div class="col-md-6">
-                <img align="center" style="height: 120px; width: 120px; border-radius: 10%;" src="http://www.lifenews.com/wp-content/uploads/2012/06/grandfather.jpg" alt="...">
-                <p align="center" style="width: 120px;">John</p>
-              </div>
-              <div class="col-md-6">
-                <p>Resident since: 2017</p>
-                <p>Family Contact: Julian (son)</p>
-                <p> Contact Phone: <br> 555-555-5555</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
       </div>
 
+
+      <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+        <div  class="thumbnail">
+           <div align="center" class="profile-img-div">
+              <img align="center" class="profile-img" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+           </div>
+           <div align="center">
+              <p class='thumbnail-name'>Mary Smith</p>
+          
+              <p class="thumbnail-year">Resident since: 2017</p>
+           </div>
+           <div align="center">
+              <div class="btn btn-see-info"><p class="btn-see-info-text">More Info</p></div>
+           </div>
+        </div>
+      </div>
+
+
+      <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+        <div  class="thumbnail">
+           <div align="center" class="profile-img-div">
+              <img align="center" class="profile-img" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+           </div>
+           <div align="center">
+              <p class='thumbnail-name'>Mary Smith</p>
+          
+              <p class="thumbnail-year">Resident since: 2017</p>
+           </div>
+           <div align="center">
+              <div class="btn btn-see-info"><p class="btn-see-info-text">More Info</p></div>
+           </div>
+        </div>
+      </div>
+
+
+      <div ng-click='$ctrl.residentClick()' class="col-sm-6 col-md-4">
+        <div  class="thumbnail">
+           <div align="center" class="profile-img-div">
+              <img align="center" class="profile-img" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+           </div>
+           <div align="center">
+              <p class='thumbnail-name'>Mary Smith</p>
+          
+              <p class="thumbnail-year">Resident since: 2017</p>
+           </div>
+           <div align="center">
+              <div class="btn btn-see-info"><p class="btn-see-info-text">More Info</p></div>
+           </div>
+        </div>
+      </div>
 
     </div>
+
+
+  </div>
+
+
+
+
+  <!-- data page -->
+<div ng-if='!$ctrl.showAllResidents' class="row">
+  <div class="col-md-3"></div>
+
+  <div class=" col-md-6 graphs-page-body">
+
+
+  <div align="center" class="title-div">
+    <p class="title-text">Identity</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/a_1.png" alt="">
+  </div>
+
+  <div id="a-1" class="q-text-div">
+    <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/a_2.png" alt="">
+  </div>
+
+  <div id="a-2" class="q-text-div">
+    <p>Prow scuttle parrel provost Sail ho shrouds spirits. </p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/a_3.png" alt="">
+  </div>
+
+  <div id="a-3" class="q-text-div">
+    <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/a_4.png" alt="">
+  </div>
+
+  <div id="a-4" class="q-text-div">
+    <p>Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/a_5.png" alt="">
+  </div>
+
+  <div id="a-5" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/a_6.png" alt="">
+  </div>
+
+  <div id="a-6" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/a_7.png" alt="">
+  </div>
+
+  <div id="a-7" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/a_8.png" alt="">
+  </div>
+
+  <div id="a-8" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+ 
+
+
+
+  <div align="center" class="title-div">
+    <p class="title-text">Autonomy</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/b_1.png" alt="">
+  </div>
+
+  <div id="b-8" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/b_2.png" alt="">
+  </div>
+
+  <div id="b-2" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/b_3.png" alt="">
+  </div>
+
+  <div id="b-3" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/b_4.png" alt="">
+  </div>
+
+  <div id="b-4" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/b_5.png" alt="">
+  </div>
+
+  <div id="b-5" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/b_6.png" alt="">
+  </div>
+
+  <div id="b-6" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+
+  <div align="center" class="title-div">
+    <p class="title-text">Autonomy</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_1.png" alt="">
+  </div>
+
+  <div id="b-8" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_2.png" alt="">
+  </div>
+
+  <div id="b-2" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_3.png" alt="">
+  </div>
+
+  <div id="b-3" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_4.png" alt="">
+  </div>
+
+  <div id="b-4" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_5.png" alt="">
+  </div>
+
+  <div id="b-5" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_6.png" alt="">
+  </div>
+
+  <div id="b-6" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+
+  <div align="center" class="title-div">
+    <p class="title-text">Autonomy</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_1.png" alt="">
+  </div>
+
+  <div id="b-8" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_2.png" alt="">
+  </div>
+
+  <div id="b-2" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_3.png" alt="">
+  </div>
+
+  <div id="b-3" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_4.png" alt="">
+  </div>
+
+  <div id="b-4" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_5.png" alt="">
+  </div>
+
+  <div id="b-5" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/c_6.png" alt="">
+  </div>
+
+  <div id="b-6" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+
+    <div class="titl4-div">
+    <p class="title-text">Autonomy</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_1.png" alt="">
+  </div>
+
+  <div id="b-8" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_2.png" alt="">
+  </div>
+
+  <div id="b-2" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_3.png" alt="">
+  </div>
+
+  <div id="b-3" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_4.png" alt="">
+  </div>
+
+  <div id="b-4" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_5.png" alt="">
+  </div>
+
+  <div id="b-5" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_6.png" alt="">
+  </div>
+
+  <div id="b-6" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+
+   <div align="center" class="title-div">
+    <p class="title-text">Autonomy</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_1.png" alt="">
+  </div>
+
+  <div id="b-8" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_2.png" alt="">
+  </div>
+
+  <div id="b-2" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_3.png" alt="">
+  </div>
+
+  <div id="b-3" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_4.png" alt="">
+  </div>
+
+  <div id="b-4" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_5.png" alt="">
+  </div>
+
+  <div id="b-5" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/d_6.png" alt="">
+  </div>
+
+  <div id="b-6" class="q-text-div">
+    <p>XXXXX</p>
+  </div> 
+
+
+
+  <div align="center" class="title-div">
+    <p class="title-text">Autonomy</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/e_1.png" alt="">
+  </div>
+
+  <div id="b-8" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/e_2.png" alt="">
+  </div>
+
+  <div id="b-2" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/e_3.png" alt="">
+  </div>
+
+  <div id="b-3" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/e_4.png" alt="">
+  </div>
+
+  <div id="b-4" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/e_5.png" alt="">
+  </div>
+
+  <div id="b-5" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/e_6.png" alt="">
+  </div>
+
+  <div id="b-6" class="q-text-div">
+    <p>XXXXX</p>
+  </div>  
+
+
+
+  <div align="center" class="title-div">
+    <p class="title-text">Autonomy</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_1.png" alt="">
+  </div>
+
+  <div id="b-8" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_2.png" alt="">
+  </div>
+
+  <div id="b-2" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_3.png" alt="">
+  </div>
+
+  <div id="b-3" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_4.png" alt="">
+  </div>
+
+  <div id="b-4" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_5.png" alt="">
+  </div>
+
+  <div id="b-5" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/f_6.png" alt="">
+  </div>
+
+  <div id="b-6" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+
+  <div align="center" class="title-div">
+    <p class="title-text">Autonomy</p>
+  </div>
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_1.png" alt="">
+  </div>
+
+  <div id="b-8" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_2.png" alt="">
+  </div>
+
+  <div id="b-2" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_3.png" alt="">
+  </div>
+
+  <div id="b-3" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_4.png" alt="">
+  </div>
+
+  <div id="b-4" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_5.png" alt="">
+  </div>
+
+  <div id="b-5" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+  <div class="q-icon-div">
+    <img class="q-icon-img" src="../assets/images/g_6.png" alt="">
+  </div>
+
+  <div id="b-6" class="q-text-div">
+    <p>XXXXX</p>
+  </div>
+
+
+
+
+<div class="col-md-3"></div>
+
+  </div>
+
+</div>
 
 
 </div>
