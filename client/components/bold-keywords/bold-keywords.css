@@ -1,30 +1,34 @@
 .normal-word {
+  color: #fff;
+  font-size: 16px;
 }
 
 .big-word {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+  color: #fff;
 }
 
 .good-word {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
-  color: green;
+  color: #28ff23;
 }
 
 .number-word {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
+  color: #fff;
 }
 
 .heart-icon {
-  font-size: 30px;
+  font-size: 18px;
   font-weight: bold;
   color: pink;
 }
 
 .bad-word {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: bold;
-  color: red;
+  color: #ff2323;
 }
