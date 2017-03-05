@@ -21,6 +21,8 @@ export class ResidentFormComponent {
 
     this.popups = [{opened: false},{opened: false},{opened: false}];
 
+    this.props.getById(this.$routeParams.userId);
+
     this.submit = () => {
       residentForm.props.submit(this.$routeParams.userId, this.props.allQuestions);
     }

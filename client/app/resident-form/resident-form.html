@@ -10,28 +10,27 @@
           <div class="form-group" ng-repeat="question in questions">
             <label>{{question.name}}</label>
             <input type="text"
-                   ng-if="!$ctrl.isDate(question)"
                    class="form-control"
                    required
                    ng-model="question.value"/>
-            <p class="input-group" ng-if="$ctrl.isDate(question)">
-              <input type="text"
-                     class="form-control"
-                     uib-datepicker-popup="{{$ctrl.format}}"
-                     ng-model="question.value" 
-                     is-open="$ctrl.popups[$index].opened" 
-                     datepicker-options="$ctrl.dateOptions"
-                     ng-required="true"
-                     close-text="Close"
-                     alt-input-formats="$ctrl.altInputFormats" />
-              <span class="input-group-btn">
-                <button type="button" 
-                        class="btn btn-default" 
-                        ng-click="$ctrl.popups[$index] = true">
-                  <i class="glyphicon glyphicon-calendar"></i>
-                </button>
-              </span>
-            </p>
+            <!-- <p class="input&#45;group" ng&#45;if="$ctrl.isDate(question)"> -->
+            <!--   <input type="text" -->
+            <!--          class="form&#45;control" -->
+            <!--          uib&#45;datepicker&#45;popup="{{$ctrl.format}}" -->
+            <!--          ng&#45;model="question.value" -->
+            <!--          is&#45;open="$ctrl.popups[$index].opened" -->
+            <!--          datepicker&#45;options="$ctrl.dateOptions" -->
+            <!--          ng&#45;required="true" -->
+            <!--          close&#45;text="Close" -->
+            <!--          alt&#45;input&#45;formats="$ctrl.altInputFormats" /> -->
+            <!--   <span class="input&#45;group&#45;btn"> -->
+            <!--     <button type="button" -->
+            <!--             class="btn btn&#45;default" -->
+            <!--             ng&#45;click="$ctrl.popups[$index] = true"> -->
+            <!--       <i class="glyphicon glyphicon&#45;calendar"></i> -->
+            <!--     </button> -->
+            <!--   </span> -->
+            <!-- </p> -->
           </div>
           <button type="button"
                   class='btn btn-default'
@@ -42,6 +41,10 @@
                   ng-click="$ctrl.tabIdx < 7 ? $ctrl.nextTab(): $ctrl.submit()">{{$ctrl.tabIdx < 7 ?  "Next": "Submit"}}</button>
         </uib-tab>
       </uib-tabset>
+
+      <button type="button"
+              class="btn btn-primary"
+              ng-click="$ctrl.submit()">Submit</button>
     </form>
   </div>
   <div class='col-md-2'></div>

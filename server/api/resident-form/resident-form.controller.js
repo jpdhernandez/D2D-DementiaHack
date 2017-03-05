@@ -12,6 +12,7 @@
 
 import jsonpatch from 'fast-json-patch';
 import ResidentForm from './resident-form.model';
+import _ from 'lodash';
 
 function respondWithResult(res, statusCode) {
   statusCode = statusCode || 200;
@@ -60,6 +61,7 @@ function handleEntityNotFound(res) {
 function handleError(res, statusCode) {
   statusCode = statusCode || 500;
   return function(err) {
+    console.error(err.stack);
     res.status(statusCode).send(err);
   };
 }
@@ -143,6 +145,7 @@ function createQuestionItem(question, category) {
 
 // Gets a list of ResidentForms
 export function index(req, res) {
+  console.log('where ami ');
   return ResidentForm.find()
   .populate({ path: 'user', select: 'name email' })
   .exec()
@@ -152,8 +155,8 @@ export function index(req, res) {
 
 // Gets a single ResidentForm from the DB
 export function show(req, res) {
+  console.log(' finding ', req.params);
   return ResidentForm.findOne({user: req.params.userId}).exec()
-    .then(createWhenEntityNotFound(res, req.params.id))
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
@@ -167,12 +170,37 @@ export function create(req, res) {
 
 // Updates the given ResidentForm in the DB at the specified ID
 export function update(req, res) {
-  return ResidentForm.findOneAndUpdate({
-    user: req.params.userId
-  }, req.body, {
-    runValidators: true
-  }).exec()
-  .then(respondWithResult(res))
+  const updatedForm = req.body.data;
+
+  return ResidentForm.findOne({ user: req.params.userId })
+  .then((form) => {
+    if (!form) {
+      return res.send(404);
+    }
+
+    const updates = [];
+
+    _.each(form.questions, (question, idx) => {
+      const updated = updatedForm[idx];
+      console.log('updated = ', updated);
+
+      if (!_.isEqual(question.value, updated.value)) {
+        updates.push({ oldValue: question, newValue: updated });
+      }
+    });
+
+    return ResidentForm.findOneAndUpdate(
+      { user: req.params.userId }, {
+        $set: {
+          questions: updatedForm
+        }
+      }, {
+        runValidators: true
+      }
+    )
+    .exec();
+  })
+  .then(() => res.send({ message: 'Successfully updated the form! We\'ll work on on making integrating these changes so that we can provide the best care for you and your family.' }))
   .catch(handleError(res));
 }
 

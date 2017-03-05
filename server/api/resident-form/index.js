@@ -5,10 +5,10 @@ var controller = require('./resident-form.controller');
 
 var router = express.Router();
 
+router.get('/:userId', controller.show);
 router.get('/', controller.index);
-router.get('/:id', controller.show);
 router.post('/', controller.create);
-router.put('/:id', controller.update);
+router.put('/:userId', controller.update);
 router.patch('/:id', controller.patch);
 router.delete('/:id', controller.destroy);
 
