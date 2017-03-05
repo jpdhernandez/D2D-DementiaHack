@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form name="nestedForm" class="tab-form-demo">
+      <uib-tabset active="$ctrl.tabIdx">
+        <uib-tab ng-repeat="(category, questions) in $ctrl.props.allQuestions" index="$index" heading="{{category}}">
+          <div class="form-group" ng-repeat="question in questions">
+            <label>{{question.name}}</label>
+            <input type="text" class="form-control" required ng-model="question.answer" />
+          </div>
+          <button type="button"
+                  class='btn btn-default'
+                  ng-disabled="$ctrl.tabIdx === 0"
+                  ng-click="$ctrl.lastTab()">Back</button>
+          <button type="button"
+                  ng-class="$ctrl.tabIdx < 8 ? 'btn btn-primary': 'btn btn-success'"
+                  ng-click="$ctrl.nextTab()">{{$ctrl.tabIdx < 8 ?  "Next": "Submit"}}</button>
+        </uib-tab>
+      </uib-tabset>
+    </form>
+  </div>
+</div>

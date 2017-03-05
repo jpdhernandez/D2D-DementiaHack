@@ -26,11 +26,14 @@ import boldKeywords from '../components/bold-keywords/bold-keywords.component';
 import main from './main/main.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
+import ResidentFormComponent from './resident-form/resident-form.component';
 
 import './app.css';
 
+
+
 angular.module('d2DDementiaHackApp', [ngCookies, ngResource, ngSanitize, ngRoute, uiBootstrap, _Auth, account,
-  admin, navbar, footer, main, constants, util, boldKeywords
+  admin, navbar, footer, main, constants, util, boldKeywords, ResidentFormComponent
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
