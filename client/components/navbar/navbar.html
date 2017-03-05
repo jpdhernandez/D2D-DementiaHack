@@ -11,13 +11,14 @@
 
       <a href="/"><img class="nav-logo" src="../../assets/images/logo.png"></a>
       <!-- <p style="font-size: 22px; margin-left: 10px; margin-top: 50px;">Visual ME</p> -->
-   
+
     </div>
     <div uib-collapse="$ctrl.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav navbar-right">
         <li ng-hide="$ctrl.isLoggedIn()" ng-class="{active: $ctrl.isActive('/signup')}"><a style='color: #fff;' href="/signup">Sign up</a></li>
         <li ng-hide="$ctrl.isLoggedIn()" ng-class="{active: $ctrl.isActive('/login')}"><a style='color: #fff;' href="/login">Login</a></li>
         <li ng-show="$ctrl.isLoggedIn()"><p style='color: #fff;' class="navbar-text">Hello {{ $ctrl.getCurrentUser().name }}</p> </li>
+        <li ng-show="$ctrl.isAdmin()" ng-class="{active: $ctrl.isActive('/admin')}"><a href="/admin">Admin</a></li>
         <li ng-show="$ctrl.isLoggedIn()" ng-class="{active: $ctrl.isActive('/settings')}"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
         <li ng-show="$ctrl.isLoggedIn()"><a style='color: #fff;' href="/logout">Logout</a></li>
       </ul>
