@@ -6,11 +6,15 @@ import {
 } from './resident-form.events';
 
 var categoryEnum = {
-  SUMMARY: 'summary',
-  IDENTITY: 'identity',
-  AUTONOMY: 'autonomy',
-  GROWTH: 'growth'
-};
+  SUMMARY: "summary",
+  IDENTITY: "identity",
+  AUTONOMY: "autonomy",
+  GROWTH: "growth",
+  CONNECTEDNESS: "connectedness",
+  SECURITY: "security",
+  MEANING: "meaning",
+  JOY: "joy"
+}
 
 function createQuestionItem(question, category) {
   return {
@@ -59,7 +63,17 @@ ResidentFormSchema.pre('save', function(next) {
     ' Cycle, Swim, or Golf?', categoryEnum.AUTONOMY),
     createQuestionItem('Are there things you want to learn about', categoryEnum.GROWTH),
     createQuestionItem('New things you want to try?', categoryEnum.GROWTH),
-    createQuestionItem('Things you might like to teach or share?', categoryEnum.GROWTH)
+    createQuestionItem('Things you might like to teach or share?', categoryEnum.GROWTH),
+    createQuestionItem('Tell us about the ways tha you would like to be involved with others, within and outside the Village.',categoryEnum.CONNECTEDNESS),
+    createQuestionItem('What helps you to feel safe?',categoryEnum.SECURITY),
+    createQuestionItem('Do you appreciate routines so you know what to expect?', categoryEnum.SECURITY),
+    createQuestionItem('How can we respect your privacy?', categoryEnum.SECURITY),
+    createQuestionItem('Tell us how you may want to contribute and be involved in activities within and outside the Village that will make you feel helpful or needed.',
+    categoryEnum.MEANING),
+    createQuestionItem('Tell us about those things that bring you pleasure.',categoryEnum.JOY),
+    createQuestionItem('Are there things you really enjoy doing ?', categoryEnum.JOY),
+    createQuestionItem('Tell us about the ways that you would like to be involved with others, within and outside the Village?',
+    categoryEnum.CONNECTEDNESS)
   ];
 
   next();
