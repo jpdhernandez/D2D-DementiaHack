@@ -40,6 +40,12 @@ p {
   border-radius: 50%;
 }
 
+.icon-title-text {
+  margin-top: 20px;
+  padding-left: 10px;
+  font-size:26px;
+}
+
 
 .meet-residents-text {
   color: #fff;
@@ -120,6 +126,21 @@ p {
   margin-top: 10px;
 }
 
+.text-color-green {
+  color:#338BF0;
+}
+
+.text-color-yellow {
+  color:#338BF0;
+}
+
+.text-color-blue {
+  color: #338BF0;
+}
+
+.text-color-red {
+  color:#338BF0 ;
+}
 
 .category-icon-img-off {
   height: 50px;
@@ -155,6 +176,7 @@ p {
   width: 75px;
   background-color: #0e2439;
   border-radius: 50%;
+  margin-left: 17px;
 }
 
 .q-text-div {
@@ -168,5 +190,5 @@ p {
   height: 50px;
   width: 50px;
   margin-top: 12.5px;
-  margin-left: 12.5px;
+  margin-left: -3px;
 }
