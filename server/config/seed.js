@@ -30,7 +30,7 @@ function generateRandomUserRole(){
 
 
 function getRandomOfItems(items){
-  return items[Math.floor((Math.random() * items.length) + 1)];
+  return items[Math.floor((Math.random() * items.length))];
 }
 
 function createQuestionItem(question, category) {
