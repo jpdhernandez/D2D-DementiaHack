@@ -106,8 +106,8 @@ function createQuestionItem(question, category) {
   return {
     name: question,
     value: null,
-    category: category,
-  }
+    category: category
+  };
 }
 
 // Gets a list of ResidentForms
@@ -119,8 +119,8 @@ export function index(req, res) {
 
 // Gets a single ResidentForm from the DB
 export function show(req, res) {
-  return ResidentForm.findOne({user: req.params.id}).exec()
-    .then(createWhenEntityNotFound(res,req.params.id))
+  return ResidentForm.findOne({user: req.params.userId}).exec()
+    .then(createWhenEntityNotFound(res, req.params.id))
     .then(respondWithResult(res))
     .catch(handleError(res));
 }
@@ -132,22 +132,15 @@ export function create(req, res) {
     .catch(handleError(res));
 }
 
-// Upserts the given ResidentForm in the DB at the specified ID
-export function upsert(req, res) {
-  if (req.body._id) {
-    delete req.body._id;
-  }
+// Updates the given ResidentForm in the DB at the specified ID
+export function update(req, res) {
   return ResidentForm.findOneAndUpdate({
-      _id: req.params.id
-    }, req.body, {
-      new: true,
-      upsert: true,
-      setDefaultsOnInsert: true,
-      runValidators: true
-    }).exec()
-
-    .then(respondWithResult(res))
-    .catch(handleError(res));
+    user: req.params.userId
+  }, req.body, {
+    runValidators: true
+  }).exec()
+  .then(respondWithResult(res))
+  .catch(handleError(res));
 }
 
 // Updates an existing ResidentForm in the DB
