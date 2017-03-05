@@ -22,6 +22,7 @@ import account from './account';
 import admin from './admin';
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
+import boldKeywords from '../components/bold-keywords/bold-keywords.component';
 import main from './main/main.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
@@ -29,7 +30,7 @@ import util from '../components/util/util.module';
 import './app.css';
 
 angular.module('d2DDementiaHackApp', [ngCookies, ngResource, ngSanitize, ngRoute, uiBootstrap, _Auth, account,
-  admin, navbar, footer, main, constants, util
+  admin, navbar, footer, main, constants, util, boldKeywords
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {

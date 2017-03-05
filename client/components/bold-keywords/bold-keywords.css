@@ -1,0 +1,19 @@
+.normal-word {
+}
+
+.big-word {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.good-word {
+  font-size: 25px;
+  font-weight: bold;
+  color: green;
+}
+
+.bad-word {
+  font-size: 25px;
+  font-weight: bold;
+  color: red;
+}
