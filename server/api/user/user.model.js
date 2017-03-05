@@ -128,7 +128,7 @@ UserSchema
 
 UserSchema
   .post('save', function(doc, next) {
-    if (this.role !== 'family') {
+    if (this.role !== 'resident') {
       return next();
     }
 
