@@ -7,14 +7,16 @@ import {
 
 var categoryEnum = {
   SUMMARY: 'summary',
-  IDENTITY: 'identity'
+  IDENTITY: 'identity',
+  AUTONOMY: 'autonomy',
+  GROWTH: 'growth'
 };
 
 function createQuestionItem(question, category) {
   return {
     name: question,
     value: null,
-    category
+    category: category
   };
 }
 
@@ -43,7 +45,21 @@ ResidentFormSchema.pre('save', function(next) {
     createQuestionItem('Was belonging to a faith group important to you? Is it now? Is there a denomination you wish to continue to be connected with?', categoryEnum.IDENTITY),
     createQuestionItem('Things people say I am good at, or talented at', categoryEnum.IDENTITY),
     createQuestionItem('Do you need alone time? What does that look like?', categoryEnum.IDENTITY),
-    createQuestionItem('Do you like to be around others? (when and how?)', categoryEnum.IDENTITY)
+    createQuestionItem('Do you like to be around others? (when and how?)', categoryEnum.IDENTITY),
+    createQuestionItem('What time do you prefer to get up?', categoryEnum.AUTONOMY),
+    createQuestionItem('What does your typical morning look '+
+     'like? (example: get up slowly, early riser, have a shower, have a coee before I get dressed,'+
+     ' what kind of breakfast you like, a walk, chores? etc.)',categoryEnum.AUTONOMY),
+    createQuestionItem('What does lunchtime look like for you?  What does a typical afternoon look like for you after lunch?   Do you have any routines you would like to keep?',categoryEnum.AUTONOMY),
+    createQuestionItem('What time do you usually have supper?  Do you enjoy a specic drink/beverage with dinner?',categoryEnum.AUTONOMY),
+    createQuestionItem('How do you like to spend your evening?  Do you have any routines or rituals you would like to keep?', categoryEnum.AUTONOMY),
+    createQuestionItem('When do you like to go to bed?  What do your night-time rituals or routines include?', categoryEnum.AUTONOMY),
+    createQuestionItem('Do you usually like to have a bath or a shower?  How often?', categoryEnum.AUTONOMY),
+    createQuestionItem('Is keeping in shape important to you?  Do you like to take a walk?  Attend a class (ie. Yoga, Cardio)?'+
+    ' Cycle, Swim, or Golf?', categoryEnum.AUTONOMY),
+    createQuestionItem('Are there things you want to learn about', categoryEnum.GROWTH),
+    createQuestionItem('New things you want to try?', categoryEnum.GROWTH),
+    createQuestionItem('Things you might like to teach or share?', categoryEnum.GROWTH)
   ];
 
   next();

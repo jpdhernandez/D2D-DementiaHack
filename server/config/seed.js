@@ -13,7 +13,9 @@ const totalItems = 100;
 
 var categoryEnum = {
   SUMMARY: "summary",
-  IDENTITY: "identity"
+  IDENTITY: "identity",
+  AUTONOMY: "autonomy",
+  GROWTH: "growth"
 }
 
 
@@ -91,20 +93,34 @@ export default function seedDatabaseIfNeeded() {
             }, function(err,instance){
               ResidentForm.create({
                 questions: [
-                  createQuestionItem("Resident Name", instance.name ,categoryEnum.SUMMARY),
-                  createQuestionItem("Date of Birth", categoryEnum.SUMMARY),
-                  createQuestionItem("Suite #", categoryEnum.SUMMARY),
-                  createQuestionItem("Form Completed By (Resident or Name of Other):", categoryEnum.SUMMARY),
-                  createQuestionItem("Date Form Completed:", categoryEnum.SUMMARY),
-                  createQuestionItem("Move In Date:", categoryEnum.SUMMARY),
-                  createQuestionItem("Where did you grow up?", categoryEnum.IDENTITY),
-                  createQuestionItem("Did you go to school – if so, where?", categoryEnum.IDENTITY),
-                  createQuestionItem("Tell me about the work you were involved in. Did you enjoy it? Do you miss it?", categoryEnum.IDENTITY),
-                  createQuestionItem("If you married, tell me about your spouse and about who makes up your family. (specic names and relationships are helpful details!)", categoryEnum.IDENTITY),
-                  createQuestionItem("Was belonging to a faith group important to you? Is it now? Is there a denomination you wish to continue to be connected with?", categoryEnum.IDENTITY),
-                  createQuestionItem("Things people say I am good at, or talented at", categoryEnum.IDENTITY),
-                  createQuestionItem("Do you need alone time? What does that look like?", categoryEnum.IDENTITY),
-                  createQuestionItem("Do you like to be around others? (when and how?)", categoryEnum.IDENTITY)
+                  createQuestionItem('Resident Name', categoryEnum.SUMMARY),
+                  createQuestionItem('Date of Birth', categoryEnum.SUMMARY),
+                  createQuestionItem('Suite #', categoryEnum.SUMMARY),
+                  createQuestionItem('Form Completed By (Resident or Name of Other):', categoryEnum.SUMMARY),
+                  createQuestionItem('Date Form Completed:', categoryEnum.SUMMARY),
+                  createQuestionItem('Move In Date:', categoryEnum.SUMMARY),
+                  createQuestionItem('Where did you grow up?', categoryEnum.IDENTITY),
+                  createQuestionItem('Did you go to school – if so, where?', categoryEnum.IDENTITY),
+                  createQuestionItem('Tell me about the work you were involved in. Did you enjoy it? Do you miss it?', categoryEnum.IDENTITY),
+                  createQuestionItem('If you married, tell me about your spouse and about who makes up your family. (specic names and relationships are helpful details!)', categoryEnum.IDENTITY),
+                  createQuestionItem('Was belonging to a faith group important to you? Is it now? Is there a denomination you wish to continue to be connected with?', categoryEnum.IDENTITY),
+                  createQuestionItem('Things people say I am good at, or talented at', categoryEnum.IDENTITY),
+                  createQuestionItem('Do you need alone time? What does that look like?', categoryEnum.IDENTITY),
+                  createQuestionItem('Do you like to be around others? (when and how?)', categoryEnum.IDENTITY),
+                  createQuestionItem('What time do you prefer to get up?', categoryEnum.AUTONOMY),
+                  createQuestionItem('What does your typical morning look '+
+                   'like? (example: get up slowly, early riser, have a shower, have a coee before I get dressed,'+
+                   ' what kind of breakfast you like, a walk, chores? etc.)',categoryEnum.AUTONOMY),
+                  createQuestionItem('What does lunchtime look like for you?  What does a typical afternoon look like for you after lunch?   Do you have any routines you would like to keep?',categoryEnum.AUTONOMY),
+                  createQuestionItem('What time do you usually have supper?  Do you enjoy a specic drink/beverage with dinner?',categoryEnum.AUTONOMY),
+                  createQuestionItem('How do you like to spend your evening?  Do you have any routines or rituals you would like to keep?', categoryEnum.AUTONOMY),
+                  createQuestionItem('When do you like to go to bed?  What do your night-time rituals or routines include?', categoryEnum.AUTONOMY),
+                  createQuestionItem('Do you usually like to have a bath or a shower?  How often?', categoryEnum.AUTONOMY),
+                  createQuestionItem('Is keeping in shape important to you?  Do you like to take a walk?  Attend a class (ie. Yoga, Cardio)?'+
+                  ' Cycle, Swim, or Golf?', categoryEnum.AUTONOMY),
+                  createQuestionItem('Are there things you want to learn about', categoryEnum.GROWTH),
+                  createQuestionItem('New things you want to try?', categoryEnum.GROWTH),
+                  createQuestionItem('Things you might like to teach or share?', categoryEnum.GROWTH)
                 ],
                 completedOn: Date.now(),
                 user: instance._id
@@ -115,37 +131,7 @@ export default function seedDatabaseIfNeeded() {
               .catch(err => console.log('error populating resident-forms',err));
             })
         }
-          // .then(() => {
-          //   console.log('finished populating users')
-          //   ResidentForm.find({}).remove()
-          //     .then(() => {
-          //       User.find({}, '_id, name', function (err, docs) {
-          //         docs.forEach(function(item){
-          //           ResidentForm.create({
-          //             questions: [
-          //               createQuestionItem("Resident Name", item.name ,categoryEnum.SUMMARY),
-          //               createQuestionItem("Date of Birth", categoryEnum.SUMMARY),
-          //               createQuestionItem("Suite #", categoryEnum.SUMMARY),
-          //               createQuestionItem("Form Completed By (Resident or Name of Other):", categoryEnum.SUMMARY),
-          //               createQuestionItem("Date Form Completed:", categoryEnum.SUMMARY),
-          //               createQuestionItem("Move In Date:", categoryEnum.SUMMARY),
-          //               createQuestionItem("Where did you grow up?", categoryEnum.IDENTITY),
-          //               createQuestionItem("Did you go to school – if so, where?", categoryEnum.IDENTITY),
-          //               createQuestionItem("Tell me about the work you were involved in. Did you enjoy it? Do you miss it?", categoryEnum.IDENTITY),
-          //               createQuestionItem("If you married, tell me about your spouse and about who makes up your family. (specic names and relationships are helpful details!)", categoryEnum.IDENTITY),
-          //               createQuestionItem("Was belonging to a faith group important to you? Is it now? Is there a denomination you wish to continue to be connected with?", categoryEnum.IDENTITY),
-          //               createQuestionItem("Things people say I am good at, or talented at", categoryEnum.IDENTITY),
-          //               createQuestionItem("Do you need alone time? What does that look like?", categoryEnum.IDENTITY),
-          //               createQuestionItem("Do you like to be around others? (when and how?)", categoryEnum.IDENTITY)
-          //             ],
-          //             completedOn: Date.now(),
-          //             user: item._id
-          //           })
-          //           .then(() => {
-          //             console.log("created resident-form for user " + item._id);
-          //           })
-          //           .catch(err => console.log('error populating resident-forms',err));
-          //         });
+
 
                 });
 
