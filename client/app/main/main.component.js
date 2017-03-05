@@ -11,7 +11,7 @@ export class MainController {
   constructor($http) {
     this.$http = $http;
     this.meow = "meow 1 2 3";
-    this.showAllResidents = true;
+    this.showAllResidents = false;
 
     console.log('jnflsf', this.showAllResidents)
 

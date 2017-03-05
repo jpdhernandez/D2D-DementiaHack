@@ -1,3 +1,64 @@
+body {
+  background-color: #0e2439;
+}
+
+p {
+  color: #fff;
+}
+
+.navbar {
+  background-color: #0e2439;
+  border: none;
+}
+
+.thumbnail {
+  background-color: #274059;
+  border: none;
+}
+
+
+.thumbnail-name {
+  margin-top: -5px;
+  color: #fff;
+  width: 280px;
+  font-size: 24px; 
+  font-weight: bold;
+  text-align: center;
+}
+
+.thumbnail-year {
+  color: #fff;
+  margin-top: -8px;
+}
+
+.profile-img {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  border: 10px #0e2439 solid;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+
+.meet-residents-text {
+  color: #fff;
+  font-size: 24px;
+}
+
+.btn-see-info  {
+  text-align: center;
+  margin-bottom: 8px;
+  height: 28px;
+  border-radius: none;
+  background-color: #338BF0;
+}
+
+.btn-see-info-text  {
+  text-align: center;
+  color: #fff;
+  margin-top: -3px;
+}
 
 .thing-form {
   margin: 20px 0;
@@ -29,7 +90,76 @@
   margin-left: 15px;
 }
 
+.graph-circle {
+  height: 150px;
+  width: 150px;
+  border: 5px solid blue;
+  border-radius: 10%;
+}
+
+.category-title {
+  font-size: 50px;
+}
+
+.graph-text-div {
+  border: 1px solid black;
+  margin-top: 10px;
+  height: 130px;
+  width: 310px;
+  border-radius: 3%;
+}
+
+.graph-text-div p {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+
+.circles-row {
+  margin-top: 10px;
+}
+
 
 .icon-img {
   height: 50px;
+}
+
+.icon-img-on {
+  height: 70px;
+}
+
+.graphs-page-body {
+  padding-top: 30px;
+  width: 600px;
+  background-color: #1f364d;
+}
+
+.title-div {
+  
+}
+
+.title-text {
+  font-size: 30px;
+}
+
+.q-icon-div {
+  height: 75px;
+  width: 75px;
+  background-color: #0e2439;
+  border-radius: 50%;
+}
+
+.q-text-div {
+  border-left: 5px #0e2439 solid;
+  margin-left: 36px;
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+.q-icon-img {
+  height: 50px;
+  width: 50px;
+  margin-top: 12.5px;
+  margin-left: 12.5px;
 }
