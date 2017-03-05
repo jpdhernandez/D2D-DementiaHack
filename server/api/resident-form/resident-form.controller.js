@@ -143,9 +143,11 @@ function createQuestionItem(question, category) {
 
 // Gets a list of ResidentForms
 export function index(req, res) {
-  return ResidentForm.find().exec()
-    .then(respondWithResult(res))
-    .catch(handleError(res));
+  return ResidentForm.find()
+  .populate({ path: 'user', select: 'name email' })
+  .exec()
+  .then(respondWithResult(res))
+  .catch(handleError(res));
 }
 
 // Gets a single ResidentForm from the DB

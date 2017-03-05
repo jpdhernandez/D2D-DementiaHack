@@ -10,6 +10,7 @@
 	border-bottom: none;
 }
 .user-list li .user-info {
+  color: black;
 	flex-grow: 1;
 }
 .user-list li .trash {

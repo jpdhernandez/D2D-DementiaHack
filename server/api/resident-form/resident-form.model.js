@@ -31,12 +31,12 @@ var ResidentFormSchema = new mongoose.Schema({
     value: String,
     category: String,
     type: {
-      type: String, 
+      type: String,
       default: "text"
     }
   }],
   completedOn: Date,
-  user: {type: mongoose.Schema.ObjectId, ref: 'user'},
+  user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 });
 
 ResidentFormSchema.pre('save', function(next) {
