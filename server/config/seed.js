@@ -11,6 +11,7 @@ import ResidentForm from '../api/resident-form/resident-form.model.js';
 
 var categoryEnum = {
   SUMMARY: "summary",
+  IDENTITY: "identity"
 }
 
 
@@ -18,6 +19,14 @@ function createQuestionItem(question, category) {
   return {
     name: question,
     value: null,
+    category: category,
+  }
+}
+
+function createQuestionItem(question, answer, category) {
+  return {
+    name: question,
+    value: answer,
     category: category,
   }
 }
@@ -77,22 +86,46 @@ export default function seedDatabaseIfNeeded() {
       });
 
       ResidentForm.find({}).remove()
-      .then(() => {
-        ResidentForm.create({
-          questions: [
-            createQuestionItem("Resident Name", categoryEnum.SUMMARY),
-            createQuestionItem("Date of Birth", categoryEnum.SUMMARY)
-          ],
-          completedOn: Date.now(),
-          user: "58bb4689d64ecfc43a76ec88"
-        },{
-          questions: [
-            createQuestionItem("Resident Name", categoryEnum.SUMMARY),
-            createQuestionItem("Date of Birth", categoryEnum.SUMMARY)
-          ],
-          completedOn: Date.now(),
-          user: "58bb4689d64ecfc43a76ec88"
-        })
-      });
+  .then(() => {
+    ResidentForm.create({
+      questions: [
+        createQuestionItem("Resident Name" , categoryEnum.SUMMARY),
+        createQuestionItem("Date of Birth",categoryEnum.SUMMARY),
+        createQuestionItem("Suite #", categoryEnum.SUMMARY),
+        createQuestionItem("Form Completed By (Resident or Name of Other):", categoryEnum.SUMMARY),
+        createQuestionItem("Date Form Completed:", categoryEnum.SUMMARY),
+        createQuestionItem("Move In Date:", categoryEnum.SUMMARY),
+        createQuestionItem("Where did you grow up?", categoryEnum.IDENTITY),
+        createQuestionItem("Did you go to school – if so, where?", categoryEnum.IDENTITY),
+        createQuestionItem("Tell me about the work you were involved in. Did you enjoy it? Do you miss it?", categoryEnum.IDENTITY),
+        createQuestionItem("If you married, tell me about your spouse and about who makes up your family. (specic names and relationships are helpful details!)", categoryEnum.IDENTITY),
+        createQuestionItem("Was belonging to a faith group important to you? Is it now? Is there a denomination you wish to continue to be connected with?", categoryEnum.IDENTITY),
+        createQuestionItem("Things people say I am good at, or talented at", categoryEnum.IDENTITY),
+        createQuestionItem("Do you need alone time? What does that look like?", categoryEnum.IDENTITY),
+        createQuestionItem("Do you like to be around others? (when and how?)", categoryEnum.IDENTITY)
+      ],
+      completedOn: Date.now(),
+      user: "58bb4689d64ecfc43a76ec88"
+    }, {
+      questions: [
+        createQuestionItem("Resident Name", categoryEnum.SUMMARY),
+        createQuestionItem("Date of Birth", categoryEnum.SUMMARY),
+        createQuestionItem("Suite #", categoryEnum.SUMMARY),
+        createQuestionItem("Form Completed By (Resident or Name of Other):", categoryEnum.SUMMARY),
+        createQuestionItem("Date Form Completed:", categoryEnum.SUMMARY),
+        createQuestionItem("Move In Date:", categoryEnum.SUMMARY),
+        createQuestionItem("Where did you grow up?", categoryEnum.IDENTITY),
+        createQuestionItem("Did you go to school – if so, where?", categoryEnum.IDENTITY),
+        createQuestionItem("Tell me about the work you were involved in. Did you enjoy it? Do you miss it?", categoryEnum.IDENTITY),
+        createQuestionItem("If you married, tell me about your spouse and about who makes up your family. (specic names and relationships are helpful details!)", categoryEnum.IDENTITY),
+        createQuestionItem("Was belonging to a faith group important to you? Is it now? Is there a denomination you wish to continue to be connected with?", categoryEnum.IDENTITY),
+        createQuestionItem("Things people say I am good at, or talented at", categoryEnum.IDENTITY),
+        createQuestionItem("Do you need alone time? What does that look like?", categoryEnum.IDENTITY),
+        createQuestionItem("Do you like to be around others? (when and how?)", categoryEnum.IDENTITY)
+      ],
+      completedOn: Date.now(),
+      user: "58bb4689d64ecfc43a76ec88"
+    })
+  });
   }
 }
