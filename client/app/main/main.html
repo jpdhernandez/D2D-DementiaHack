@@ -9,6 +9,7 @@
   <div ng-if='$ctrl.showAllResidents' class="row">
 
     <div align="center">
+      <h2>Visual ME</h2>
       <p class="meet-residents-text">Meet Our Residents</p>
     </div>
 
@@ -23,31 +24,28 @@
 
 
     <div ng-if='$ctrl.showAllResidents' style="margin-top: 15px;" class="row">
-
-
-
       <div ng-repeat="item in $ctrl.residentsSummary" class="col-sm-6 col-md-4">
       <div  class="thumbnail">
          <div align="center" class="profile-img-div">
-            <img align="center" class="profile-img" src="http://cdn.playbuzz.com/cdn/e22985e7-b45c-4e61-89c7-2a5458d22131/840b4a44-bf09-48fd-8066-c021eae58b30_560_420.jpg" alt="...">
+            <img align="center" class="profile-img" src="https://slack-imgs.com/?c=1&url=http%3A%2F%2Ftaramohr.com%2Fwp-content%2Fthemes%2Fgone-fishing%2Fimages%2Fgrandmother%2Fpaola.jpg" alt="...">
          </div>
          <div align="center">
-            <p class='thumbnail-name'>{{item.questions[3].value}}</p>
+            <p class='thumbnail-name'>{{item.user.name}}</p>
             <p class="thumbnail-year">{{item.questions[5].value}}</p>
          </div>
          <div align="center">
-            <div class="btn btn-see-info" ng-click='$ctrl.residentClick()'><p class="btn-see-info-text">More Info</p></div>
+            <div class="btn btn-see-info" ng-click='$ctrl.residentClick(item.user._id)'><p class="btn-see-info-text">More Info</p></div>
          </div>
       </div>
     </div>
-
+  </div>
   </div>
 
 
 
 
   <!-- data page -->
-<div align="center" style="margin-left: 100px;">
+<div align="center">
   <div ng-if='!$ctrl.showAllResidents'>
 
     <img ng-if='!$ctrl.identityFlag' class="category-icon-img-off" ng-click='$ctrl.identityClick()' src="../assets/images/icon_identity.png" alt="">
@@ -93,13 +91,13 @@
       <img class="q-icon-img" src="../assets/images/a_1.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p class="text-color-green">Where He/She Grew Up</p>
+      <p class="text-color-green">"Where did you grow up?"</p>
     </div>
   </div>
 
 
-  <div ng-if='$ctrl.identityFlag' id="a-1" class="q-text-div"><p>
-    <bold-keywords phrase="'I love eating 4 pizzas everyday and hate cookies.'"</bold-keywords><p>
+  <div id="a-1" class="q-text-div"><p>
+    <bold-keywords phrase="$ctrl.selectedResident.questions[6].value"</bold-keywords><p>
   </div>
 
 
@@ -114,7 +112,7 @@
 
   <div ng-if='$ctrl.identityFlag' id="a-2" class="q-text-div">
     <p>
-    <bold-keywords phrase="'I like eating pizza on Sundays. Sometimes I eat cookies on Thursdays, but hate chicken on Fridays.'"</bold-keywords><p>
+    <bold-keywords phrase="$ctrl.selectedResident.questions[7].value"</bold-keywords><p>
   </div>
 
 
@@ -129,7 +127,7 @@
 
   <div ng-if='$ctrl.identityFlag' id="a-3" class="q-text-div">
     <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+    <bold-keywords phrase="$ctrl.selectedResident.questions[8].value"</bold-keywords><p>
   </div>
 
   <div ng-if='$ctrl.identityFlag' class="row">
@@ -143,7 +141,7 @@
 
   <div ng-if='$ctrl.identityFlag' id="a-4" class="q-text-div">
     <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+    <bold-keywords phrase="$ctrl.selectedResident.questions[9].value"</bold-keywords><p>
   </div>
 
 
@@ -152,13 +150,13 @@
       <img class="q-icon-img" src="../assets/images/a_5.png" alt="">
     </div>
     <div class="icon-title-text col-xs-8">
-      <p text-color-green>Religious Beliefs</p>
+      <p class='text-color-green'>Religious Beliefs</p>
     </div>
   </div>
 
   <div ng-if='$ctrl.identityFlag' id="a-5" class="q-text-div">
     <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+    <bold-keywords phrase="$ctrl.selectedResident.questions[10].value"</bold-keywords><p>
   </div>
 
 
@@ -173,7 +171,7 @@
 
   <div ng-if='$ctrl.identityFlag' id="a-6" class="q-text-div">
     <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+    <bold-keywords phrase="$ctrl.selectedResident.questions[11].value"</bold-keywords><p>
   </div>
 
 
@@ -188,7 +186,7 @@
 
   <div ng-if='$ctrl.identityFlag' id="a-7" class="q-text-div">
     <p>
-    <bold-keywords phrase="'XXXXXXX'"</bold-keywords><p>
+    <bold-keywords phrase="$ctrl.selectedResident.questions[12].value"</bold-keywords><p>
   </div>
 
 

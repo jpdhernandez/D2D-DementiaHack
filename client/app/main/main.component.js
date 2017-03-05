@@ -20,12 +20,18 @@ export class MainController {
     this.meaningFlag = false;
     this.joyFlag = false;
     this.residentsSummary = [];
+    this.selectedResident = {};
   }
 
 
 
-  residentClick() {
+  residentClick(userId) {
     this.showAllResidents = false;
+    for( var i = 0 ; i < this.residentsSummary.length; i++){
+      if(this.residentsSummary[i].user._id === userId){
+        this.selectedResident = this.residentsSummary[i];
+      }
+    }
   }
 
 
