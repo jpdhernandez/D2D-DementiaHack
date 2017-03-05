@@ -211,7 +211,7 @@ export function update(req, res) {
       });
 
       let mailOptions = {
-          from: '"DementiaHack D2D 👻" <dementiahackd2d@gmail.com>', // sender address
+          from: '"Visual ME 👻" <dementiahackd2d@gmail.com>', // sender address
           to: `${admin.name} <${admin.email}>`, // list of receivers
           subject: 'Some changes were made by a family member', // plain text body
           html: `
