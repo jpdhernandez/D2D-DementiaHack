@@ -4,6 +4,7 @@ import crypto from 'crypto';
 mongoose.Promise = require('bluebird');
 import mongoose, {Schema} from 'mongoose';
 import {registerEvents} from './user.events';
+import ResidentForm from '../resident-form/resident-form.model';
 
 var UserSchema = new Schema({
   name: String,
@@ -13,8 +14,7 @@ var UserSchema = new Schema({
     required: true
   },
   role: {
-    type: String,
-    default: 'user'
+    type: String
   },
   password: {
     type: String,
@@ -123,6 +123,18 @@ UserSchema
         return next();
       });
     });
+  });
+
+
+UserSchema
+  .post('save', function(doc, next) {
+    if (this.role !== 'family') {
+      return next();
+    }
+
+    ResidentForm.create({ user: this._id })
+    .then(() => next())
+    .catch(next);
   });
 
 /**
