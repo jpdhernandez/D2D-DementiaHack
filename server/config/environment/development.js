@@ -11,6 +11,6 @@ module.exports = {
   },
 
   // Seed database on startup
-  seedDB: process.env.SEED_DB || true
+  seedDB: !!process.env.SEED_DB || true
 
 };
