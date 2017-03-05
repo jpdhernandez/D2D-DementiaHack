@@ -66,7 +66,7 @@ p {
 
 .nav-logo {
   height: 40px;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: -10px;
 }
 
@@ -129,13 +129,14 @@ p {
 }
 
 .category-icon-img-on {
-  height: 65px;
+  height: 80px;
   margin-left: 4px;
   margin-right: 4px;
   cursor: pointer;
 }
 
 .graphs-page-body {
+  margin-top: 20px;
   padding-top: 30px;
   width: 600px;
   background-color: #1f364d;
