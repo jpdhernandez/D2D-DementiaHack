@@ -1,5 +1,6 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<div class="row  row-centered">
+  <div class="col-md-6 col-centered">
+    <!--<pre>{{$ctrl.props.allQuestions|json}}</pre>-->
     <form name="nestedForm" class="tab-form-demo">
       <uib-tabset active="$ctrl.tabIdx">
         <uib-tab ng-repeat="(category, questions) in $ctrl.props.allQuestions" index="$index" heading="{{category}}">
@@ -8,11 +9,19 @@
             <input type="text"
                    ng-show="!($ctrl.isDate(question.name))"
                    class="form-control"
-                   required ng-model="question.answer"/>
+                   required ng-model="question.value"/>
             <p class="input-group" ng-show="($ctrl.isDate(question.name))">
-              <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="question.answer" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+              <input type="text"
+                     class="form-control"
+                     uib-datepicker-popup="{{$ctrl.format}}"
+                     ng-model="question.value" 
+                     is-open="$ctrl.popup1.opened" 
+                     datepicker-options="$ctrl.dateOptions"
+                     ng-required="true"
+                     close-text="$ctrl.Close"
+                     alt-input-formats="$ctrl.altInputFormats" />
               <span class="input-group-btn">
-                <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                <button type="button" class="btn btn-default" ng-click="$ctrl.open1()"><i class="glyphicon glyphicon-calendar"></i></button>
               </span>
             </p>
           </div>
@@ -22,7 +31,7 @@
                   ng-click="$ctrl.lastTab()">Back</button>
           <button type="button"
                   ng-class="$ctrl.tabIdx < 7 ? 'btn btn-primary': 'btn btn-success'"
-                  ng-click="$ctrl.nextTab()">{{$ctrl.tabIdx < 7 ?  "Next": "Submit"}}</button>
+                  ng-click="$ctrl.tabIdx < 7 ? $ctrl.nextTab(): $ctrl.submit()">{{$ctrl.tabIdx < 7 ?  "Next": "Submit"}}</button>
         </uib-tab>
       </uib-tabset>
     </form>

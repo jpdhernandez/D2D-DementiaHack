@@ -19,13 +19,17 @@ export class ResidentFormComponent {
     this.tabIdx = 0;
     this.lastIdx = 8;
 
+    this.submit = () => {
+      residentForm.props.submit(this.$routeParams.userId, this.props.allQuestions);
+    }
+
     // date stuff
-    this.today = function () {
+    this.today = () => {
       this.dt = new Date();
     };
     this.today();
 
-    this.clear = function () {
+    this.clear = () => {
       this.dt = null;
     };
 
@@ -50,22 +54,22 @@ export class ResidentFormComponent {
       return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
     }
 
-    this.toggleMin = function () {
+    this.toggleMin = () => {
       this.inlineOptions.minDate = this.inlineOptions.minDate ? null : new Date();
       this.dateOptions.minDate = this.inlineOptions.minDate;
     };
 
     this.toggleMin();
 
-    this.open1 = function () {
+    this.open1 = () => {
       this.popup1.opened = true;
     };
 
-    this.open2 = function () {
+    this.open2 = () => {
       this.popup2.opened = true;
     };
 
-    this.setDate = function (year, month, day) {
+    this.setDate = (year, month, day) => {
       this.dt = new Date(year, month, day);
     };
 
@@ -124,16 +128,10 @@ export class ResidentFormComponent {
     this.tabIdx < 8 ? this.tabIdx++ : this.lastIdx;
   }
 
-  submit(data) {
-    residentForm.submit(this.$routeParams.userId, data);
-  }
-
   isDate(question) {
     const pattern = new RegExp("date", "i");
     return pattern.test(question);
   }
-
-
 }
 
 export default angular.module('d2DDementiaHackApp.resident-form', [ngRoute])

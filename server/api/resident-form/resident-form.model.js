@@ -6,14 +6,14 @@ import {
 } from './resident-form.events';
 
 var categoryEnum = {
-  SUMMARY: "summary",
-  IDENTITY: "identity",
-  AUTONOMY: "autonomy",
-  GROWTH: "growth",
-  CONNECTEDNESS: "connectedness",
-  SECURITY: "security",
-  MEANING: "meaning",
-  JOY: "joy"
+  BASICINFO: "Basic Info",
+  IDENTITY: "Identity",
+  AUTONOMY: "Autonomy",
+  GROWTH: "Growth",
+  CONNECTEDNESS: "Connectedness",
+  SECURITY: "Security",
+  MEANING: "Meaning",
+  JOY: "Joy"
 }
 
 function createQuestionItem(question, category) {
@@ -36,12 +36,12 @@ var ResidentFormSchema = new mongoose.Schema({
 
 ResidentFormSchema.pre('save', function(next) {
   this.questions = [
-    createQuestionItem('Resident Name', categoryEnum.SUMMARY),
-    createQuestionItem('Date of Birth', categoryEnum.SUMMARY),
-    createQuestionItem('Suite #', categoryEnum.SUMMARY),
-    createQuestionItem('Form Completed By (Resident or Name of Other):', categoryEnum.SUMMARY),
-    createQuestionItem('Date Form Completed:', categoryEnum.SUMMARY),
-    createQuestionItem('Move In Date:', categoryEnum.SUMMARY),
+    createQuestionItem('Resident Name', categoryEnum.BASICINFO),
+    createQuestionItem('Date of Birth', categoryEnum.BASICINFO),
+    createQuestionItem('Suite #', categoryEnum.BASICINFO),
+    createQuestionItem('Form Completed By (Resident or Name of Other):', categoryEnum.BASICINFO),
+    createQuestionItem('Date Form Completed:', categoryEnum.BASICINFO),
+    createQuestionItem('Move In Date:', categoryEnum.BASICINFO),
     createQuestionItem('Where did you grow up?', categoryEnum.IDENTITY),
     createQuestionItem('Did you go to school – if so, where?', categoryEnum.IDENTITY),
     createQuestionItem('Tell me about the work you were involved in. Did you enjoy it? Do you miss it?', categoryEnum.IDENTITY),
