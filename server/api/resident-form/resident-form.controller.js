@@ -85,7 +85,7 @@ function createD2DQuestionsTemplate(userObjectId) {
           createQuestionItem("Date of Birth", categoryEnum.SUMMARY)
         ],
         completedOn: Date.now(),
-        user: userObjectId,
+        user: userObjectId
       }
 }
 

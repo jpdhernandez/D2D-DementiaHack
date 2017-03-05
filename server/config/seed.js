@@ -7,6 +7,20 @@
 import Thing from '../api/thing/thing.model';
 import User from '../api/user/user.model';
 import config from './environment/';
+import ResidentForm from '../api/resident-form/resident-form.model.js';
+
+var categoryEnum = {
+  SUMMARY: "summary",
+}
+
+
+function createQuestionItem(question, category) {
+  return {
+    name: question,
+    value: null,
+    category: category,
+  }
+}
 
 export default function seedDatabaseIfNeeded() {
   if(config.seedDB) {
@@ -60,6 +74,25 @@ export default function seedDatabaseIfNeeded() {
         })
         .then(() => console.log('finished populating users'))
         .catch(err => console.log('error populating users', err));
+      });
+
+      ResidentForm.find({}).remove()
+      .then(() => {
+        ResidentForm.create({
+          questions: [
+            createQuestionItem("Resident Name", categoryEnum.SUMMARY),
+            createQuestionItem("Date of Birth", categoryEnum.SUMMARY)
+          ],
+          completedOn: Date.now(),
+          user: "58bb4689d64ecfc43a76ec88"
+        },{
+          questions: [
+            createQuestionItem("Resident Name", categoryEnum.SUMMARY),
+            createQuestionItem("Date of Birth", categoryEnum.SUMMARY)
+          ],
+          completedOn: Date.now(),
+          user: "58bb4689d64ecfc43a76ec88"
+        })
       });
   }
 }
