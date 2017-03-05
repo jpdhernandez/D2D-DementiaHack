@@ -11,26 +11,70 @@ export class MainController {
   constructor($http) {
     this.$http = $http;
     this.meow = "meow 1 2 3";
-    this.showAllResidents = false;
+    this.showAllResidents = true;
 
-    console.log('jnflsf', this.showAllResidents)
-
+    this.identityFlag = true;
+    this.autonomyFlag = false;
+    this.connectednessFlag = false;
+    this.growthFlag = false;
+    this.securityFlag = false;
+    this.meaningFlag = false;
+    this.joyFlag = false;
   }
 
 
 
   residentClick() {
     this.showAllResidents = false;
-  console.log('click!', this.showAllResidents);
-
-
   }
 
 
-  test() {
-    this.flag = true;
-    this.x = 'cat';
+  identityClick() {
+    this.categoriesToFalse();
+    this.identityFlag = true;
+  }  
+
+  autonomyClick() {
+    this.categoriesToFalse();
+    this.autonomyFlag = true;
   }
+
+  connectednessClick() {
+    this.categoriesToFalse();
+    this.connectednessFlag = true;
+  }  
+
+  growthClick() {
+    this.categoriesToFalse();
+    this.growthFlag = true;
+  }
+
+  securityClick() {
+    this.categoriesToFalse();
+    this.securityFlag = true;
+  }
+
+  meaningClick() {
+    this.categoriesToFalse();
+    this.meaningFlag = true;
+  }
+
+  joyClick() {
+    this.categoriesToFalse();
+    this.joyFlag = true;
+  }
+
+  categoriesToFalse() {
+    this.identityFlag = false;
+    this.autonomyFlag = false;
+    this.connectednessFlag = false;
+    this.growthFlag = false;
+    this.securityFlag = false;
+    this.meaningFlag = false;
+    this.joyFlag = false;    
+  }
+
+
 
 
   $onInit() {

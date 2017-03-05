@@ -66,7 +66,7 @@ p {
 
 .nav-logo {
   height: 40px;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: -10px;
 }
 
@@ -121,15 +121,22 @@ p {
 }
 
 
-.icon-img {
+.category-icon-img-off {
   height: 50px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
 }
 
-.icon-img-on {
-  height: 70px;
+.category-icon-img-on {
+  height: 80px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
 }
 
 .graphs-page-body {
+  margin-top: 20px;
   padding-top: 30px;
   width: 600px;
   background-color: #1f364d;
@@ -140,7 +147,7 @@ p {
 }
 
 .title-text {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .q-icon-div {
