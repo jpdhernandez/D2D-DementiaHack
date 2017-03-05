@@ -10,23 +10,24 @@
           <div class="form-group" ng-repeat="question in questions">
             <label>{{question.name}}</label>
             <input type="text"
-                   ng-show="!($ctrl.isDate(question.name))"
+                   ng-if="!$ctrl.isDate(question)"
                    class="form-control"
-                   required ng-model="question.value"/>
-            <p class="input-group" ng-show="($ctrl.isDate(question.name))">
+                   required
+                   ng-model="question.value"/>
+            <p class="input-group" ng-if="$ctrl.isDate(question)">
               <input type="text"
                      class="form-control"
                      uib-datepicker-popup="{{$ctrl.format}}"
                      ng-model="question.value" 
-                     is-open="$ctrl.popup1.opened" 
+                     is-open="$ctrl.popups[$index].opened" 
                      datepicker-options="$ctrl.dateOptions"
                      ng-required="true"
-                     close-text="$ctrl.Close"
+                     close-text="Close"
                      alt-input-formats="$ctrl.altInputFormats" />
               <span class="input-group-btn">
                 <button type="button" 
                         class="btn btn-default" 
-                        ng-click="$ctrl.open1()">
+                        ng-click="$ctrl.popups[$index] = true">
                   <i class="glyphicon glyphicon-calendar"></i>
                 </button>
               </span>

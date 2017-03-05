@@ -16,11 +16,12 @@ var categoryEnum = {
   JOY: "Joy"
 }
 
-function createQuestionItem(question, category) {
+function createQuestionItem(question, category, type) {
   return {
     name: question,
     value: null,
-    category: category
+    category: category,
+    type: type
   };
 }
 
@@ -28,7 +29,11 @@ var ResidentFormSchema = new mongoose.Schema({
   questions: [{
     name: String,
     value: String,
-    category: String
+    category: String,
+    type: {
+      type: String, 
+      default: "text"
+    }
   }],
   completedOn: Date,
   user: {type: mongoose.Schema.ObjectId, ref: 'user'},
@@ -37,11 +42,11 @@ var ResidentFormSchema = new mongoose.Schema({
 ResidentFormSchema.pre('save', function(next) {
   this.questions = [
     createQuestionItem('Resident Name', categoryEnum.BASICINFO),
-    createQuestionItem('Date of Birth', categoryEnum.BASICINFO),
+    createQuestionItem('Date of Birth', categoryEnum.BASICINFO, "date"),
     createQuestionItem('Suite #', categoryEnum.BASICINFO),
     createQuestionItem('Form Completed By (Resident or Name of Other):', categoryEnum.BASICINFO),
-    createQuestionItem('Date Form Completed:', categoryEnum.BASICINFO),
-    createQuestionItem('Move In Date:', categoryEnum.BASICINFO),
+    createQuestionItem('Date Form Completed:', categoryEnum.BASICINFO, "date"),
+    createQuestionItem('Move In Date:', categoryEnum.BASICINFO, "date"),
     createQuestionItem('Where did you grow up?', categoryEnum.IDENTITY),
     createQuestionItem('Did you go to school – if so, where?', categoryEnum.IDENTITY),
     createQuestionItem('Tell me about the work you were involved in. Did you enjoy it? Do you miss it?', categoryEnum.IDENTITY),

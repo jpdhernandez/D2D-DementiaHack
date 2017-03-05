@@ -19,6 +19,8 @@ export class ResidentFormComponent {
     this.tabIdx = 0;
     this.lastIdx = 8;
 
+    this.popups = [{opened: false},{opened: false},{opened: false}];
+
     this.submit = () => {
       residentForm.props.submit(this.$routeParams.userId, this.props.allQuestions);
     }
@@ -130,8 +132,7 @@ export class ResidentFormComponent {
   }
 
   isDate(question) {
-    const pattern = new RegExp("date", "i");
-    return pattern.test(question);
+    return question.type === "date";
   }
 }
 
